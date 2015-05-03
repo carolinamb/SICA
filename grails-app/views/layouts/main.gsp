@@ -184,11 +184,11 @@
 <script type="text/javascript">
 	init.push(function () {
 		//Javascript code here
-		$('#main-menu').on('touchend', 'a', function () {
+		$('#main-menu,#main-navbar').on('touchend', 'a', function () {
 			$(this).trigger('click');
 			return false;
 		});
-		$('#main-menu').on('touchend', 'button', function () {
+		$('#main-menu,#main-navbar').on('touchend', 'button', function () {
 			$(this).trigger('click');
 			return false;
 		});
