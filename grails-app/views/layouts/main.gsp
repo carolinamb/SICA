@@ -122,7 +122,7 @@
 			</div>
 			<ul class="navigation">
 				<li>
-					<g:link action="index" controller="grado"><i class="menu-icon fa fa-file-text-o"></i><span class="mm-text">Operaciones Diarias</span></g:link>
+					<g:link action="index" controller="movimiento"><i class="menu-icon fa fa-file-text-o"></i><span class="mm-text">Operaciones Diarias</span></g:link>
 				</li>
 				<li class="mm-dropdown">
 					<a href="#"><i class="menu-icon fa fa-users"></i><span class="mm-text">Personal</span></a>
@@ -160,6 +160,9 @@
 						</li>
 						<li>
 							<g:link action="index" controller="region"><i class="menu-icon fa fa-th-large"></i><span class="mm-text">Regi&oacute;n</span></g:link>
+						</li>
+						<li>
+							<g:link action="index" controller="turno"><i class="menu-icon fa fa-random"></i><span class="mm-text">Turno</span></g:link>
 						</li>
 					</ul>
 				</li>
