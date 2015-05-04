@@ -16,7 +16,7 @@
 		        <span class="required-indicator">*</span>
 	        </label>
             <div class="col-sm-10">
-	            <g:textField name="descripcion" required="" value="${gradoInstance?.descripcion}"/>
+	            <g:textField name="descripcion" class="form-control" required="" value="${gradoInstance?.descripcion}"/>
             </div>
         </div>
     </div>
