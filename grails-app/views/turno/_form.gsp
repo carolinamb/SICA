@@ -11,7 +11,7 @@
 		        <span class="required-indicator">*</span>
 	        </label>
             <div class="col-sm-10">
-	            <g:textField name="descripcion" required="" value="${turnoInstance?.descripcion}"/>
+	            <g:textField name="descripcion" class="form-control" required="" value="${turnoInstance?.descripcion}"/>
             </div>
          </div>
     </div>
