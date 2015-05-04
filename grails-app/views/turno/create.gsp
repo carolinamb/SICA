@@ -3,26 +3,26 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'turno.label', default: 'Turno')}" />
-		<title><g:message code="default.create.label" args="[entityName]" /></title>
+		<title><g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.turno"/></title>
 	</head>
 	<body>
         <div class="nav" role="navigation">
             <ul>
                 <g:link class="btn btn-labeled icon fa fa-list btn-dark-gray btn-rounded" action="index">
-                <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.armero"/>
+                    <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.turnos"/>
                 </g:link>
             </ul>
         </div>
 		<div id="create-turno" class="content scaffold-create" role="main">
 			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
+			    <div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<g:hasErrors bean="${turnoInstance}">
-			<ul class="errors" role="alert">
-				<g:eachError bean="${turnoInstance}" var="error">
-				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-				</g:eachError>
-			</ul>
+                <ul class="errors" role="alert">
+                    <g:eachError bean="${turnoInstance}" var="error">
+                    <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+                    </g:eachError>
+                </ul>
 			</g:hasErrors>
 			<g:form url="[resource:turnoInstance, action:'save']" >
 				<fieldset class="form">

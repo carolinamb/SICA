@@ -5,13 +5,13 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'cartucho.label', default: 'Cartucho')}" />
-		<title><g:message code="default.list.label" args="[entityName]" /></title>
+		<title><g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.cartuchos"/></title>
 	</head>
 	<body>
         <div class="nav" role="navigation">
             <ul>
                 <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
-                    <g:message code="default.create.label" args="[entityName]" />
+                    <g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.cartucho"/>
                 </g:link>
             </ul>
         </div>
@@ -21,7 +21,7 @@
 			</g:if>
             <div class="panel">
                 <div class="panel-heading">
-                    <span class="panel-title">Lista de cartuchos</span>
+                    <span class="panel-title"><g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.cartuchos"/></span>
                 </div>
                 <div class="panel-body">
                     <table class="table table-hover">

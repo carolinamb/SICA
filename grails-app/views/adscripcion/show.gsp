@@ -5,16 +5,16 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'adscripcion.label', default: 'Adscripcion')}" />
-		<title><g:message code="default.show.label" args="[entityName]" /></title>
+		<title><g:message code="default.button.mostrarDetalle.label"/> <g:message code="default.palabra.minus.adscripcion"/></title>
 	</head>
 	<body>
         <div class="nav" role="navigation">
             <ul>
                 <g:link class="btn btn-labeled icon fa fa-list btn-dark-gray btn-rounded" action="index">
-                    <g:message code="default.list.label" args="[entityName]" />
+                    <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.adscripciones"/>
                 </g:link>
                 <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
-                    <g:message code="default.create.label" args="[entityName]" />
+                    <g:message code="default.button.crearNueva.label"/> <g:message code="default.palabra.minus.adscripcion"/>
                 </g:link>
             </ul>
         </div>
@@ -24,7 +24,7 @@
 			</g:if>
             <div class="panel colourable">
                 <div class="panel-heading">
-                    <span class="panel-title">Detalles de adscripcion</span>
+                    <span class="panel-title"><g:message code="default.button.mostrarDetalle.label"/> <g:message code="default.palabra.minus.adscripcion"/></span>
                 </div>
                 <div class="panel-body">
 

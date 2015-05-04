@@ -4,10 +4,10 @@
 <div class="panel">
     <div class="panel-heading">
         <g:if test="${edit}">
-            <span class="panel-title"><g:message code="default.button.editar.label"/> <g:message code="default.palabra.minus.armero"/></span>
+            <span class="panel-title"><g:message code="default.button.editar.label"/> <g:message code="default.palabra.minus.policia"/></span>
         </g:if>
         <g:if test="${!edit}">
-            <span class="panel-title"><g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.armero"/></span>
+            <span class="panel-title"><g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.policia"/></span>
         </g:if>
     </div>
     <div class="panel-body">
@@ -27,7 +27,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:textField name="nombre" required="" value="${policiaInstance?.nombre}"/>
+                <g:textField name="nombre"  class="form-control" required="" value="${policiaInstance?.nombre}"/>
             </div>
         </div>
 
@@ -67,7 +67,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                    <g:select id="puesto" name="puesto.id" from="${personal.Puesto.list()}" optionValue="descripcion" optionKey="id" required="" value="${policiaInstance?.puesto?.id}" class="many-to-one"/>
+                    <g:select id="puesto" name="puesto.id"  class="form-control" from="${personal.Puesto.list()}" optionValue="descripcion" optionKey="id" required="" value="${policiaInstance?.puesto?.id}" class="many-to-one"/>
             </div>
         </div>
 
@@ -77,7 +77,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:select id="grado" name="grado.id" from="${personal.Grado.list()}" optionValue="descripcion" optionKey="id" required="" value="${policiaInstance?.grado?.id}" class="many-to-one"/>
+                <g:select id="grado" name="grado.id"  class="form-control" from="${personal.Grado.list()}" optionValue="descripcion" optionKey="id" required="" value="${policiaInstance?.grado?.id}" class="many-to-one"/>
             </div>
         </div>
 
@@ -87,7 +87,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:select id="adscripcion" name="adscripcion.id" from="${personal.Adscripcion.list()}" optionValue="descripcion" optionKey="id" required="" value="${policiaInstance?.adscripcion?.id}" class="many-to-one"/>
+                <g:select id="adscripcion" name="adscripcion.id"  class="form-control" from="${personal.Adscripcion.list()}" optionValue="descripcion" optionKey="id" required="" value="${policiaInstance?.adscripcion?.id}" class="many-to-one"/>
             </div>
         </div>
 
@@ -97,7 +97,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:field name="cartuchosAbastecidos" type="number" value="${policiaInstance.cartuchosAbastecidos}" required=""/>
+                <g:field name="cartuchosAbastecidos"  class="form-control" type="number" value="${policiaInstance.cartuchosAbastecidos}" required=""/>
             </div>
         </div>
 
@@ -107,7 +107,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:field name="cargadoresAbastecidos" type="number" value="${policiaInstance.cargadoresAbastecidos}" required=""/>
+                <g:field name="cargadoresAbastecidos"  class="form-control" type="number" value="${policiaInstance.cargadoresAbastecidos}" required=""/>
             </div>
         </div>
 
@@ -117,7 +117,7 @@
 
             </label>
             <div class="col-sm-10">
-                <g:select name="armas" from="${armamento.Arma.list()}" optionValue="tipo" multiple="multiple" optionKey="id" size="5" value="${policiaInstance?.armas*.id}" class="many-to-many"/>
+                <g:select name="armas"  class="form-control" from="${armamento.Arma.list()}" optionValue="tipo" multiple="multiple" optionKey="id" size="5" value="${policiaInstance?.armas*.id}" class="many-to-many"/>
             </div>
         </div>
 
@@ -127,7 +127,7 @@
 
             </label>
             <div class="col-sm-10">
-                <g:select name="cartuchos" from="${armamento.Cartucho.list()}" optionValue="calibre" multiple="multiple" optionKey="id" size="5" value="${policiaInstance?.cartuchos*.id}" class="many-to-many"/>
+                <g:select name="cartuchos"  class="form-control" from="${armamento.Cartucho.list()}" optionValue="calibre" multiple="multiple" optionKey="id" size="5" value="${policiaInstance?.cartuchos*.id}" class="many-to-many"/>
             </div>
         </div>
     </div>

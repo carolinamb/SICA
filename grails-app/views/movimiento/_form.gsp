@@ -4,32 +4,32 @@
 <div class="panel">
     <div class="panel-heading">
         <g:if test="${edit}">
-            <span class="panel-title"><g:message code="default.button.editar.label"/> <g:message code="default.palabra.minus.armero"/></span>
+            <span class="panel-title"><g:message code="default.button.editar.label"/> <g:message code="default.palabra.minus.movimiento"/></span>
         </g:if>
         <g:if test="${!edit}">
-            <span class="panel-title"><g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.armero"/></span>
+            <span class="panel-title"><g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.movimiento"/></span>
         </g:if>
     </div>
-        <div class="panel-body">
-            <div class="fieldcontain ${hasErrors(bean: movimientoInstance, field: 'policia', 'error')} required form-group col-sm-6">
-                <label for="policia" class="col-sm-2 control-label">
-                    <g:message code="movimiento.policia.label" default="Policia" />
-                    <span class="required-indicator">*</span>
-                </label>
+    <div class="panel-body">
+        <div class="fieldcontain ${hasErrors(bean: movimientoInstance, field: 'policia', 'error')} required form-group col-sm-6">
+            <label for="policia" class="col-sm-2 control-label">
+                <g:message code="movimiento.policia.label" default="Policia" />
+                <span class="required-indicator">*</span>
+            </label>
             <div class="col-sm-10">
                 <g:select id="policia" name="policia.id" from="${personal.Policia.list()}" optionValue="clave" optionKey="id" required="" value="${movimientoInstance?.policia?.id}" class="many-to-one"/>
             </div>
         </div>
 
-            <div class="fieldcontain ${hasErrors(bean: movimientoInstance, field: 'armero', 'error')} required form-group col-sm-6">
-                <label for="armero" class="col-sm-2 control-label">
-                    <g:message code="movimiento.armero.label" default="Armero" />
-                    <span class="required-indicator">*</span>
-                </label>
-                <div class="col-sm-10">
-                    <g:select id="armero" name="armero.id" from="${personal.Armero.list()}" optionValue="nombre" optionKey="id" required="" value="${movimientoInstance?.armero?.id}" class="many-to-one"/>
-                </div>
+        <div class="fieldcontain ${hasErrors(bean: movimientoInstance, field: 'armero', 'error')} required form-group col-sm-6">
+            <label for="armero" class="col-sm-2 control-label">
+                <g:message code="movimiento.armero.label" default="Armero" />
+                <span class="required-indicator">*</span>
+            </label>
+            <div class="col-sm-10">
+                <g:select id="armero" name="armero.id" from="${personal.Armero.list()}" optionValue="nombre" optionKey="id" required="" value="${movimientoInstance?.armero?.id}" class="many-to-one"/>
             </div>
+        </div>
 
         <div class="fieldcontain ${hasErrors(bean: movimientoInstance, field: 'turno', 'error')} required form-group col-sm-6">
             <label for="turno" class="col-sm-2 control-label">
@@ -94,7 +94,7 @@
 
             </label>
             <div class="col-sm-10">
-                <g:textField name="observaciones" value="${movimientoInstance?.observaciones}"/>
+                <g:textField name="observaciones" class="form-control" required="" value="${movimientoInstance?.observaciones}"/>
             </div>
         </div>
     </div>

@@ -4,16 +4,16 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'adscripcion.label', default: 'Adscripcion')}" />
-		<title><g:message code="default.edit.label" args="[entityName]" /></title>
+		<title><g:message code="default.button.editar.label"/> <g:message code="default.palabra.minus.adscripcion"/></title>
 	</head>
 	<body>
         <div class="nav" role="navigation">
             <ul>
                 <g:link class="btn btn-labeled icon fa fa-list btn-dark-gray btn-rounded" action="index">
-                    <g:message code="default.list.label" args="[entityName]" />
+                    <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.adscripciones"/>
                 </g:link>
                 <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
-                    <g:message code="default.create.label" args="[entityName]" />
+                    <g:message code="default.button.crearNueva.label"/> <g:message code="default.palabra.minus.adscripcion"/>
                 </g:link>
             </ul>
         </div>
@@ -31,7 +31,7 @@
 			<g:form url="[resource:adscripcionInstance, action:'update']" method="PUT" >
 				<g:hiddenField name="version" value="${adscripcionInstance?.version}" />
 				<fieldset class="form">
-					<g:render template="form"/>
+					<g:render template="form" model="[edit:true]"/>
 				</fieldset>
 				<fieldset class="buttons">
                     <g:actionSubmit class="btn btn-success" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />

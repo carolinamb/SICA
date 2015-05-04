@@ -4,10 +4,10 @@
 <div class="panel">
     <div class="panel-heading">
         <g:if test="${edit}">
-            <span class="panel-title"><g:message code="default.button.editar.label"/> <g:message code="default.palabra.minus.armero"/></span>
+            <span class="panel-title"><g:message code="default.button.editar.label"/> <g:message code="default.palabra.minus.region"/></span>
         </g:if>
         <g:if test="${!edit}">
-            <span class="panel-title"><g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.armero"/></span>
+            <span class="panel-title"><g:message code="default.button.crearNueva.label"/> <g:message code="default.palabra.minus.region"/></span>
         </g:if>
     </div>
     <div class="panel-body">
@@ -17,7 +17,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:textField name="descripcion" required="" value="${regionInstance?.descripcion}"/>
+                <g:textField name="descripcion" class="form-control" required="" value="${regionInstance?.descripcion}"/>
             </div>
         </div>
     </div>
