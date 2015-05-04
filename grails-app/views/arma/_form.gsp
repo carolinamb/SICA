@@ -12,7 +12,7 @@
 		   <span class="required-indicator">*</span>
 	    </label>
         <div class="col-sm-10">
-	       <g:textField name="marca" required="" value="${armaInstance?.marca}"/>
+	       <g:textField name="marca" class="form-control" required="" value="${armaInstance?.marca}"/>
         </div>
         </div>
         <div class="fieldcontain ${hasErrors(bean: armaInstance, field: 'tipo', 'error')} required form-group col-sm-6">
@@ -21,7 +21,7 @@
 		    <span class="required-indicator">*</span>
 	    </label>
         <div class="col-sm-10">
-	        <g:textField name="tipo" required="" value="${armaInstance?.tipo}"/>
+	        <g:textField name="tipo" class="form-control" required="" value="${armaInstance?.tipo}"/>
         </div>
     </div>
 
@@ -31,7 +31,7 @@
 		    <span class="required-indicator">*</span>
 	    </label>
         <div class="col-sm-10">
-	        <g:textField name="modelo" required="" value="${armaInstance?.modelo}"/>
+	        <g:textField name="modelo" class="form-control" required="" value="${armaInstance?.modelo}"/>
         </div>
     </div>
 
@@ -51,7 +51,7 @@
 		    <span class="required-indicator">*</span>
 	    </label>
         <div class="col-sm-10">
-	        <g:textField name="matricula" required="" value="${armaInstance?.matricula}"/>
+	        <g:textField name="matricula" class="form-control" required="" value="${armaInstance?.matricula}"/>
         </div>
     </div>
     </div>
