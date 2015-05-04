@@ -3,13 +3,13 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'adscripcion.label', default: 'Adscripcion')}" />
-		<title><g:message code="default.create.label" args="[entityName]" /></title>
+		<title><g:message code="default.button.crearNueva.label"/> <g:message code="default.palabra.minus.adscripcion"/></title>
 	</head>
 	<body>
         <div class="nav" role="navigation">
             <ul>
                 <g:link class="btn btn-labeled icon fa fa-list btn-dark-gray btn-rounded" action="index">
-                    <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.armero"/>
+                    <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.adscripciones"/>
                 </g:link>
             </ul>
         </div>
