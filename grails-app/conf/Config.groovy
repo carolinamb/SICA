@@ -119,3 +119,32 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'security.user'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'security.userrole'
+grails.plugins.springsecurity.authority.className = 'security.role'
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'security.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'security.UserRole'
+grails.plugins.springsecurity.authority.className = 'security.Role'
+
+
+grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
+grails.plugins.springsecurity.interceptUrlMap = [
+        '/js/**':                            ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/css/**':                           ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/images/**':                        ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/logout/**':                        ['IS_AUTHENTICATED_ANONYMOUSLY'],
+        '/arma/**':                          ['ROLE_ADMIN'],
+        '/cartucho/**':                      ['ROLE_ADMIN'],
+        '/turno/**':                         ['ROLE_ADMIN'],
+        '/movimiento/**':                    ['ROLE_ADMIN'],
+        '/adscripcion/**':                   ['ROLE_ADMIN'],
+        '/armero/**':                        ['ROLE_ADMIN'],
+        '/grado/**':                         ['ROLE_ADMIN'],
+        '/policia/**':                       ['ROLE_ADMIN'],
+        '/puesto/**':                        ['ROLE_ADMIN'],
+        '/region/**':                        ['ROLE_ADMIN']
+]
