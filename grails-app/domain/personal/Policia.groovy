@@ -9,8 +9,8 @@ class Policia {
     String nombre
     String primerApellido
     String segundoApellido
-    Long cartuchosAvastecidos
-    Long cargadoresAvastecidos
+    Long cartuchosAbastecidos
+    Long cargadoresAbastecidos
 
     Region region
     Puesto puesto
@@ -28,8 +28,8 @@ class Policia {
         puesto nullable: false
         grado nullable: false
         adscripcion nullable: false
-        cartuchosAvastecidos nullable: false
-        cargadoresAvastecidos nullable: false
+        cartuchosAbastecidos nullable: false
+        cargadoresAbastecidos nullable: false
         armas nullable:true
         cartuchos nullable:true
     }
