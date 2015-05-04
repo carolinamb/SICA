@@ -8,40 +8,45 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#list-cartucho" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="lista"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
+        <div class="nav" role="navigation">
+            <ul>
+                <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
+                    <g:message code="default.create.label" args="[entityName]" />
+                </g:link>
+            </ul>
+        </div>
 		<div id="list-cartucho" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<table>
-			<thead>
-					<tr>
+            <div class="panel">
+                <div class="panel-heading">
+                    <span class="panel-title">Lista de cartuchos</span>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+						    <g:sortableColumn property="marca" title="${message(code: 'cartucho.marca.label', default: 'Marca')}" />
 					
-						<g:sortableColumn property="marca" title="${message(code: 'cartucho.marca.label', default: 'Marca')}" />
+						    <g:sortableColumn property="calibre" title="${message(code: 'cartucho.calibre.label', default: 'Calibre')}" />
+
+                        </tr>
+                        </thead>
+                        <tbody>
+				            <g:each in="${cartuchoInstanceList}" status="i" var="cartuchoInstance">
+				            	<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<g:sortableColumn property="calibre" title="${message(code: 'cartucho.calibre.label', default: 'Calibre')}" />
+						            <td><g:link action="show" id="${cartuchoInstance.id}">${fieldValue(bean: cartuchoInstance, field: "marca")}</g:link></td>
 					
-					</tr>
-				</thead>
-				<tbody>
-				<g:each in="${cartuchoInstanceList}" status="i" var="cartuchoInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					            	<td>${fieldValue(bean: cartuchoInstance, field: "calibre")}</td>
 					
-						<td><g:link action="show" id="${cartuchoInstance.id}">${fieldValue(bean: cartuchoInstance, field: "marca")}</g:link></td>
-					
-						<td>${fieldValue(bean: cartuchoInstance, field: "calibre")}</td>
-					
-					</tr>
-				</g:each>
-				</tbody>
-			</table>
+					            </tr>
+				            </g:each>
+				        </tbody>
+			        </table>
+                </div>
+            </div>
 			<div class="pagination">
 				<g:paginate total="${cartuchoInstanceCount ?: 0}" />
 			</div>

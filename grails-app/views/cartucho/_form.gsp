@@ -1,22 +1,33 @@
 <%@ page import="armamento.Cartucho" %>
 
-
-
-<div class="fieldcontain ${hasErrors(bean: cartuchoInstance, field: 'marca', 'error')} required">
-	<label for="marca">
-		<g:message code="cartucho.marca.label" default="Marca" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="marca" required="" value="${cartuchoInstance?.marca}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: cartuchoInstance, field: 'calibre', 'error')} required">
-	<label for="calibre">
-		<g:message code="cartucho.calibre.label" default="Calibre" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="calibre" type="number" value="${cartuchoInstance.calibre}" required=""/>
-
+<div class="panel">
+    <div class="panel-heading">
+        <g:if test="${edit}">
+            <span class="panel-title"><g:message code="default.button.editar.label"/> <g:message code="default.palabra.minus.armero"/></span>
+        </g:if>
+        <g:if test="${!edit}">
+            <span class="panel-title"><g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.armero"/></span>
+        </g:if>
+    </div>
+    <div class="panel-body">
+         <div class="fieldcontain ${hasErrors(bean: cartuchoInstance, field: 'marca', 'error')} required form-group col-sm-6">
+              <label for="marca" class="col-sm-2 control-label">
+                   <g:message code="cartucho.marca.label" default="Marca" />
+                       <span class="required-indicator">*</span>
+              </label>
+              <div class="col-sm-10">
+                    <g:textField name="marca" required="" value="${cartuchoInstance?.marca}"/>
+               </div>
+         </div>
+    </div>
+        <div class="fieldcontain ${hasErrors(bean: cartuchoInstance, field: 'calibre', 'error')} required form-group col-sm-6">
+            <label for="calibre" class="col-sm-2 control-label">
+                 <g:message code="cartucho.calibre.label" default="Calibre" />
+                <span class="required-indicator">*</span>
+            </label>
+        <div class="col-sm-10">
+              <g:field name="calibre" type="number" value="${cartuchoInstance.calibre}" required=""/>
+        </div>
+    </div>
 </div>
 
