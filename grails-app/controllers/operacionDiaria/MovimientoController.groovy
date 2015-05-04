@@ -1,6 +1,6 @@
 package operacionDiaria
 
-
+import personal.Policia
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -34,6 +34,8 @@ class MovimientoController {
             respond movimientoInstance.errors, view:'create'
             return
         }
+
+        movimientoInstance.setFecha(new Date())
 
         movimientoInstance.save flush:true
 
@@ -99,6 +101,26 @@ class MovimientoController {
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }
+        }
+    }
+
+    def buscarPoliciaClave(){
+        println('Buscar policia por clave')
+        println('La clave introducida es:'+params.clave)
+        Policia policiaInstance
+        def movimiento
+        Boolean entrega=false
+        try {
+            policiaInstance=Policia.findByClave(params.clave)
+            movimiento=Movimiento.findByPoliciaAndVersion(policiaInstance,0)
+            if (!movimiento){
+                entrega=true
+                render template: 'informacionGeneral', model: [policiaInstance:policiaInstance,entrega:entrega]
+            }
+            else
+                render template: 'informacionGeneral', model: [policiaInstance:policiaInstance,movimientoInstance:movimiento]
+        }catch (Exception e){
+            e.printStackTrace()
         }
     }
 }
