@@ -7,18 +7,17 @@
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>
 	<body>
-    <div class="nav" role="navigation">
-        <ul>
-            <g:link class="btn btn-labeled icon fa fa-list btn-dark-gray btn-rounded" action="index">
-                <g:message code="default.list.label" args="[entityName]" />
-            </g:link>
-            <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
-                <g:message code="default.create.label" args="[entityName]" />
-            </g:link>
-        </ul>
-    </div>
+        <div class="nav" role="navigation">
+            <ul>
+                <g:link class="btn btn-labeled icon fa fa-list btn-dark-gray btn-rounded" action="index">
+                    <g:message code="default.list.label" args="[entityName]" />
+                </g:link>
+                <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
+                    <g:message code="default.create.label" args="[entityName]" />
+                </g:link>
+            </ul>
+        </div>
 		<div id="edit-adscripcion" class="content scaffold-edit" role="main">
-			<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -35,7 +34,7 @@
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+                    <g:actionSubmit class="btn btn-success" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
 				</fieldset>
 			</g:form>
 		</div>

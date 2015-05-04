@@ -21,7 +21,7 @@
 			</g:if>
             <div class="panel">
                 <div class="panel-heading">
-                    <span class="panel-title">Lista de aremeros</span>
+                    <span class="panel-title">Lista de adscripcion</span>
                 </div>
                 <div class="panel-body">
                     <table class="table table-hover">
