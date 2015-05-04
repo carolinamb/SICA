@@ -94,7 +94,7 @@
 
             </label>
             <div class="col-sm-10">
-                <g:textField name="observaciones" value="${movimientoInstance?.observaciones}"/>
+                <g:textField name="observaciones" class="form-control" required="" value="${movimientoInstance?.observaciones}"/>
             </div>
         </div>
     </div>
