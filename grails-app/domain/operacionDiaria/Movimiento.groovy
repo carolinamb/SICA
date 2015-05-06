@@ -10,8 +10,8 @@ class Movimiento {
     Armero armero
     Turno turno
 
-    Long cartuchosEntregados
-    Long cartuchosRecibidos
+    String cartuchosEntregados
+    String cartuchosRecibidos
     Long cargadoresEntregados
     Long cargadoresRecibidos
     Date fecha
