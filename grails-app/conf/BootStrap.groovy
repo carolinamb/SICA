@@ -30,7 +30,7 @@ class BootStrap {
         Puesto puesto=new Puesto(descripcion: 'puesto uno').save(flush: true)
         Grado grado=new Grado(descripcion: 'Grado uno').save(flush: true)
         Policia policia=new Policia(
-                clave: 'AS-8000URB',
+
                 nombre: 'Angel',
                 primerApellido: 'Hernandez',
                 segundoApellido: 'Gonzalez',
