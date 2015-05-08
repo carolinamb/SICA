@@ -8,5 +8,9 @@
 		<div id="page-body" role="main">
 			<h1>Bienvenido al Sistema de Control de Armamento</h1>
 		</div>
+        <div>
+            <img  src="$(resource(dir: 'images', file: 'logotipo.png.'))">
+
+        </div>
 	</body>
 </html>
