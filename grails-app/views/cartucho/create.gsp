@@ -6,13 +6,13 @@
 		<title><g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.cartucho"/></title>
 	</head>
 	<body>
-    <div class="nav" role="navigation">
-        <ul>
-            <g:link class="btn btn-labeled icon fa fa-list btn-dark-gray btn-rounded" action="index">
-                <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.cartuchos"/>
-            </g:link>
-        </ul>
-    </div>
+        <div class="nav" role="navigation">
+            <ul>
+                <g:link class="btn btn-labeled icon fa fa-list btn-dark-gray btn-rounded" action="index">
+                    <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.cartuchos"/>
+                </g:link>
+            </ul>
+        </div>
 		<div id="create-cartucho" class="content scaffold-create" role="main">
 			<g:if test="${flash.message}">
 			    <div class="message" role="status">${flash.message}</div>
