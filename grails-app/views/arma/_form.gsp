@@ -7,7 +7,7 @@
             <span class="panel-title"><g:message code="default.button.editar.label"/> <g:message code="default.palabra.minus.arma"/></span>
         </g:if>
         <g:if test="${!edit}">
-            <span class="panel-title"><g:message code="default.button.crearNueva.label"/> <g:message code="default.palabra.minus.arma"/></span>
+            <span class="panel-title"><g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.arma"/></span>
         </g:if>
     </div>
     <div class="panel-body">
@@ -46,7 +46,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:field name="calibre" type="number" value="${armaInstance.calibre}" required=""/>
+                <g:field name="calibre" class="form-control" type="number" required="" value="${armaInstance.calibre}"/>
             </div>
         </div>
 
