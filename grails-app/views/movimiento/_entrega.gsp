@@ -4,7 +4,7 @@
         <span class="required-indicator">*</span>
     </label>
     <div class="col-sm-10">
-        <g:textField  name="cartuchosEntregados" type="number" value="${movimientoInstance?.cartuchosEntregados}" required=""/>
+        <g:textField class="form-control"  name="cartuchosEntregados" type="number" value="${movimientoInstance?.cartuchosEntregados}" required=""/>
     </div>
 </div>
 
@@ -14,6 +14,6 @@
         <span class="required-indicator">*</span>
     </label>
     <div class="col-sm-10">
-        <g:field name="cargadoresEntregados" type="number" value="${movimientoInstance?.cargadoresEntregados}" required=""/>
+        <g:field class="form-control" name="cargadoresEntregados" type="number" value="${movimientoInstance?.cargadoresEntregados}" required=""/>
     </div>
 </div>

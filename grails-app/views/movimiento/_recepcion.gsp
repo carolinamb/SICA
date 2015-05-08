@@ -3,7 +3,7 @@
         <g:message code="movimiento.cartuchosRecibidos.label" default="Cartuchos Recibidos" />
     </label>
     <div class="col-sm-10">
-        <g:textField  name="cartuchosRecibidos" type="number" value="${movimientoInstance?.cartuchosRecibidos}"/>
+        <g:textField class="form-control"  name="cartuchosRecibidos" type="number" value="${movimientoInstance?.cartuchosRecibidos}"/>
     </div>
 </div>
 
@@ -11,6 +11,7 @@
     <label for="cargadoresRecibidos" class="col-sm-2 control-label">
         <g:message code="movimiento.cargadoresRecibidos.label" default="Cargadores Recibidos" />
     </label>
-    <g:field name="cargadoresRecibidos" type="number" value="${movimientoInstance?.cargadoresRecibidos}"/>
-
+    <div class="col-sm-10">
+        <g:field class="form-control" name="cargadoresRecibidos" type="number" value="${movimientoInstance?.cargadoresRecibidos}"/>
+    </div>
 </div>

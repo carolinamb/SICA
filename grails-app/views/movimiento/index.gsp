@@ -27,11 +27,11 @@
                     <table class="table table-hover">
                         <thead>
                         <tr>
-                            <th><g:message code="movimiento.policia.label" default="Policia" /></th>
+                            <g:sortableColumn property="policia" title="${message(code: 'armero.policia.label', default: 'Policia')}" />
 
-                            <th><g:message code="movimiento.armero.label" default="Armero" /></th>
+                            <g:sortableColumn property="armero" title="${message(code: 'armero.armero.label', default: 'Armero')}" />
 
-                            <th><g:message code="movimiento.turno.label" default="Turno" /></th>
+                            <g:sortableColumn property="turno" title="${message(code: 'armero.turno.label', default: 'Turno')}" />
 
                             <g:sortableColumn property="cartuchosEntregados" title="${message(code: 'movimiento.cartuchosEntregados.label', default: 'Cartuchos Entregados')}" />
 
@@ -39,12 +39,14 @@
 
                             <g:sortableColumn property="cargadoresEntregados" title="${message(code: 'movimiento.cargadoresEntregados.label', default: 'Cargadores Entregados')}" />
 
+                            <g:sortableColumn property="cargadoresRecibidos" title="${message(code: 'movimiento.cargadoresRecibidos.label', default: 'Cargadores Recibidos')}" />
+
                         </tr>
                         </thead>
                         <tbody>
 				            <g:each in="${movimientoInstanceList}" status="i" var="movimientoInstance">
-					            <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-						            <td><g:link action="show" id="${movimientoInstance.id}">${fieldValue(bean: movimientoInstance?.policia, field: "clave")}</g:link></td>
+                                <tr class="${(i % 2) == 0 ? 'even' : 'odd'} mouse-over" onclick='document.location = "<g:createLink action='show' id='${movimientoInstance.id}'/>"'>
+						            <td>${fieldValue(bean: movimientoInstance?.policia, field: "clave")}</td>
 					
                                     <td>${fieldValue(bean: movimientoInstance?.armero, field: "id")}</td>
 
@@ -55,7 +57,9 @@
                                     <td>${fieldValue(bean: movimientoInstance, field: "cartuchosRecibidos")}</td>
 
                                     <td>${fieldValue(bean: movimientoInstance, field: "cargadoresEntregados")}</td>
-					
+
+                                    <td>${fieldValue(bean: movimientoInstance, field: "cargadoresRecibidos")}</td>
+
 					            </tr>
 				            </g:each>
 			        	</tbody>
