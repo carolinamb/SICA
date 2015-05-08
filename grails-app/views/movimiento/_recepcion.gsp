@@ -3,7 +3,7 @@
         <g:message code="movimiento.cartuchosRecibidos.label" default="Cartuchos Recibidos" />
     </label>
     <div class="col-sm-10">
-        <g:field name="cartuchosRecibidos" type="number" value="${movimientoInstance?.cartuchosRecibidos}"/>
+        <g:textField  name="cartuchosRecibidos" type="number" value="${movimientoInstance?.cartuchosRecibidos}"/>
     </div>
 </div>
 

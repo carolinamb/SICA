@@ -4,7 +4,7 @@
         <span class="required-indicator">*</span>
     </label>
     <div class="col-sm-10">
-        <g:field name="cartuchosEntregados" type="number" value="${movimientoInstance?.cartuchosEntregados}" required=""/>
+        <g:textField  name="cartuchosEntregados" type="number" value="${movimientoInstance?.cartuchosEntregados}" required=""/>
     </div>
 </div>
 
