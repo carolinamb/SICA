@@ -7,7 +7,7 @@
             <span class="panel-title"><g:message code="default.button.editar.label"/> <g:message code="default.palabra.minus.region"/></span>
         </g:if>
         <g:if test="${!edit}">
-            <span class="panel-title"><g:message code="default.button.crearNueva.label"/> <g:message code="default.palabra.minus.region"/></span>
+            <span class="panel-title"><g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.region"/></span>
         </g:if>
     </div>
     <div class="panel-body">
