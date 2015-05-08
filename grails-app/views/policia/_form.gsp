@@ -97,7 +97,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:field name="cartuchosAbastecidos"  class="form-control" type="number" value="${policiaInstance.cartuchosAbastecidos}" required=""/>
+                <g:textField  name="cartuchosAbastecidos"  class="form-control" type="number" value="${policiaInstance.cartuchosAbastecidos}" required=""/>
             </div>
         </div>
 
@@ -111,7 +111,7 @@
             </div>
         </div>
 
-        <div class="fieldcontain ${hasErrors(bean: policiaInstance, field: 'armas', 'error')} ">
+        <div class="fieldcontain ${hasErrors(bean: policiaInstance, field: 'armas', 'error')} required form-group col-sm-6">
             <label for="armas" class="col-sm-2 control-label">
                 <g:message code="policia.armas.label" default="Armas" />
 
@@ -121,7 +121,7 @@
             </div>
         </div>
 
-        <div class="fieldcontain ${hasErrors(bean: policiaInstance, field: 'cartuchos', 'error')} ">
+        <div class="fieldcontain ${hasErrors(bean: policiaInstance, field: 'cartuchos', 'error')} required form-group col-sm-6">
             <label for="cartuchos" class="col-sm-2 control-label">
                 <g:message code="policia.cartuchos.label" default="Cartuchos" />
 
@@ -132,3 +132,4 @@
         </div>
     </div>
 </div>
+
