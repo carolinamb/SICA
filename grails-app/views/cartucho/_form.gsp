@@ -12,8 +12,8 @@
     <div class="panel-body">
         <div class="fieldcontain ${hasErrors(bean: cartuchoInstance, field: 'marca', 'error')} required form-group col-sm-6">
             <label for="marca" class="col-sm-2 control-label">
-               <g:message code="cartucho.marca.label" default="Marca" />
-                   <span class="required-indicator">*</span>
+                <g:message code="cartucho.marca.label" default="Marca" />
+                <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
                 <g:textField name="marca" class="form-control" required="" value="${cartuchoInstance?.marca}"/>
