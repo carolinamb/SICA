@@ -25,7 +25,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:field class="form-control" name="calibre" type="number" value="${cartuchoInstance.calibre}" required=""/>
+                <g:textField  class="form-control" name="calibre" type="number" value="${cartuchoInstance.calibre}" required=""/>
             </div>
         </div>
     </div>
