@@ -10,8 +10,8 @@ class Movimiento {
     Armero armero
     Turno turno
 
-    Long cartuchosEntregados
-    Long cartuchosRecibidos
+    String cartuchosEntregados
+    String cartuchosRecibidos
     Long cargadoresEntregados
     Long cargadoresRecibidos
     Date fecha
@@ -23,11 +23,12 @@ class Movimiento {
         policia nullable: false
         armero nullable: false
         turno nullable: false
-        cartuchosEntregados nullable: false
+        cartuchosEntregados nullable: true
         cartuchosRecibidos nullable: true
-        cargadoresEntregados nullable: false
+        cargadoresEntregados nullable: true
         cargadoresRecibidos nullable: true
-        fecha nullable: false
+        fecha nullable: true
         observaciones nullable: true
     }
+
 }

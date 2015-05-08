@@ -9,7 +9,7 @@ class Policia {
     String nombre
     String primerApellido
     String segundoApellido
-    Long cartuchosAbastecidos
+    String cartuchosAbastecidos
     Long cargadoresAbastecidos
 
     Region region

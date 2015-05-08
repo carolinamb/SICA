@@ -3,7 +3,7 @@ package armamento
 class Cartucho {
 
     String marca
-    Long calibre
+    String calibre
 
     static constraints = {
 

@@ -5,7 +5,7 @@ class Arma {
     String marca
     String tipo
     String modelo
-    Long calibre
+    String calibre
     String matricula
 
     static constraints = {
