@@ -9,7 +9,7 @@
 			<h1>Bienvenido al Sistema de Control de Armamento</h1>
 		</div>
         <div>
-            <img src="${resource(dir: 'images', file: 'grails_logo.png')}">
+            <img src="${resource(dir: 'images', file: 'logotipo.png')}">
 
         </div>
 	</body>
