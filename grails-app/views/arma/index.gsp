@@ -11,7 +11,7 @@
         <div class="nav" role="navigation">
             <ul>
                 <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
-                    <g:message code="default.button.crearNueva.label"/> <g:message code="default.palabra.minus.arma"/>
+                    <g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.arma"/>
                 </g:link>
             </ul>
         </div>
@@ -40,7 +40,7 @@
                         </thead>
                         <tbody>
                             <g:each in="${armaInstanceList}" status="i" var="armaInstance">
-                                <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+                                <tr class="${(i % 2) == 0 ? 'even' : 'odd'} mouse-over" onclick='document.location = "<g:createLink action='show' id='${armaInstance.id}'/>"'>
 
                                     <td><g:link action="show" id="${armaInstance.id}">${fieldValue(bean: armaInstance, field: "marca")}</g:link></td>
 
