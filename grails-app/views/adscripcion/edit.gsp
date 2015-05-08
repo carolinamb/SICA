@@ -13,20 +13,20 @@
                     <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.adscripciones"/>
                 </g:link>
                 <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
-                    <g:message code="default.button.crearNueva.label"/> <g:message code="default.palabra.minus.adscripcion"/>
+                    <g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.adscripcion"/>
                 </g:link>
             </ul>
         </div>
 		<div id="edit-adscripcion" class="content scaffold-edit" role="main">
 			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
+			    <div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<g:hasErrors bean="${adscripcionInstance}">
-			<ul class="errors" role="alert">
-				<g:eachError bean="${adscripcionInstance}" var="error">
-				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-				</g:eachError>
-			</ul>
+                <ul class="errors" role="alert">
+                    <g:eachError bean="${adscripcionInstance}" var="error">
+                    <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+                    </g:eachError>
+                </ul>
 			</g:hasErrors>
 			<g:form url="[resource:adscripcionInstance, action:'update']" method="PUT" >
 				<g:hiddenField name="version" value="${adscripcionInstance?.version}" />
