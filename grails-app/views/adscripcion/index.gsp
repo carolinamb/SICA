@@ -11,7 +11,7 @@
         <div class="nav" role="navigation">
             <ul>
                 <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
-                    <g:message code="default.button.crearNueva.label"/> <g:message code="default.palabra.minus.adscripcion"/>
+                    <g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.adscripcion"/>
                 </g:link>
             </ul>
         </div>
@@ -33,10 +33,9 @@
 				        </thead>
 				        <tbody>
 				            <g:each in="${adscripcionInstanceList}" status="i" var="adscripcionInstance">
-					            <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
-						            <td><g:link action="show" id="${adscripcionInstance.id}">${fieldValue(bean: adscripcionInstance, field: "descripcion")}</g:link></td>
-					
+                                <tr class="${(i % 2) == 0 ? 'even' : 'odd'} mouse-over" onclick='document.location = "<g:createLink action='show' id='${adscripcionInstance.id}'/>"'>
+
+                                    <td>${fieldValue(bean: adscripcionInstance, field: "descripcion")}</td>
 					            </tr>
 				            </g:each>
 				        </tbody>
