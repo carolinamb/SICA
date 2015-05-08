@@ -35,8 +35,8 @@
                         </thead>
                         <tbody>
 				            <g:each in="${cartuchoInstanceList}" status="i" var="cartuchoInstance">
-				            	<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
+                                <tr class="${(i % 2) == 0 ? 'even' : 'odd'} mouse-over" onclick='document.location = "<g:createLink action='show' id='${cartuchoInstance.id}'/>"'>
+
 						            <td><g:link action="show" id="${cartuchoInstance.id}">${fieldValue(bean: cartuchoInstance, field: "marca")}</g:link></td>
 					
 					            	<td>${fieldValue(bean: cartuchoInstance, field: "calibre")}</td>
