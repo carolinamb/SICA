@@ -24,35 +24,35 @@
 			</g:if>
             <div class="panel colourable">
                 <div class="panel-heading">
-                    <span class="panel-title">Detalles de cartucho</span>
+                    <span class="panel-title"><g:message code="default.button.mostrarDetalle.label"/> <g:message code="default.palabra.minus.cartucho"/></span>
                 </div>
                 <div class="panel-body">
 
 
                     <g:if test="${cartuchoInstance?.marca}">
                         <div class="fieldcontain col-sm-6">
-                           <span id="marca-label" class="property-label"><g:message code="cartucho.marca.label" default="Marca" /></span>
+                           <span id="marca-label" class="property-label col-sm-4 text-bold"><g:message code="cartucho.marca.label" default="Marca" /></span>
 					
-						    <span class="property-value" aria-labelledby="marca-label"><g:fieldValue bean="${cartuchoInstance}" field="marca"/></span>
+						    <span class="property-value col-sm-8" aria-labelledby="marca-label"><g:fieldValue bean="${cartuchoInstance}" field="marca"/></span>
 					
 				        </div>
 				    </g:if>
 			
                     <g:if test="${cartuchoInstance?.calibre}">
                         <div class="fieldcontain col-sm-6">
-                            <span id="calibre-label" class="property-label"><g:message code="cartucho.calibre.label" default="Calibre" /></span>
+                            <span id="calibre-label" class="property-label col-sm-4 text-bold"><g:message code="cartucho.calibre.label" default="Calibre" /></span>
 
-                            <span class="property-value" aria-labelledby="calibre-label"><g:fieldValue bean="${cartuchoInstance}" field="calibre"/></span>
+                            <span class="property-value col-sm-8" aria-labelledby="calibre-label"><g:fieldValue bean="${cartuchoInstance}" field="calibre"/></span>
 
                         </div>
                     </g:if>
                 </div>
 			</div>
 			<g:form url="[resource:cartuchoInstance, action:'delete']" method="DELETE">
-				<fieldset class="buttons">
+                <div class="btn-group btn-group-xs">
                     <g:link class="btn btn-warning" action="edit" resource="${armeroInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
                     <g:actionSubmit class="btn btn-danger" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-				</fieldset>
+				</div>
 			</g:form>
 		</div>
 	</body>
