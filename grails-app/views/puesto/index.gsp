@@ -33,7 +33,7 @@
                         </thead>
                         <tbody>
 				            <g:each in="${puestoInstanceList}" status="i" var="puestoInstance">
-					            <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+                                <tr class="${(i % 2) == 0 ? 'even' : 'odd'} mouse-over" onclick='document.location = "<g:createLink action='show' id='${puestoInstance.id}'/>"'>
 					
 					            	<td><g:link action="show" id="${puestoInstance.id}">${fieldValue(bean: puestoInstance, field: "descripcion")}</g:link></td>
 					
