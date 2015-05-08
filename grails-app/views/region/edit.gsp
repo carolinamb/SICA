@@ -13,7 +13,7 @@
                     <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.regiones"/>
                 </g:link>
                 <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
-                    <g:message code="default.button.crearNueva.label"/> <g:message code="default.palabra.minus.region"/>
+                    <g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.region"/>
                 </g:link>
             </ul>
         </div>
