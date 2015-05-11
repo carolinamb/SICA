@@ -46,6 +46,8 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         compile ":scaffolding:2.0.3"
         compile ':cache:1.1.2'
+        compile ":jasper:1.11.0"
+
 
         runtime ":jquery:1.11.1"
         compile ":jquery-ui:1.10.4"
@@ -56,6 +58,7 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
         runtime ":resources:1.2.7"
+        runtime ":jasper:latest"
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
         //runtime ":cached-resources:1.1"
@@ -70,4 +73,4 @@ grails.project.dependency.resolution = {
         //compile ":coffee-asset-pipeline:1.5.0"
         //compile ":handlebars-asset-pipeline:1.3.0.1"
     }
-}
+ }
