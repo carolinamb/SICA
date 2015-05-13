@@ -109,6 +109,7 @@
                         </div>
                     </g:if>
 			    </div>
+                <g:jasperReport controller="movimiento" action="generarReporte" format="PDF" jasper="movimiento" name="reporte" id="${movimientoInstance?.id}" description="Reporte de movimiento"/>
             </div>
 			<g:form url="[resource:movimientoInstance, action:'delete']" method="DELETE">
                 <div class="btn-group btn-group-xs">

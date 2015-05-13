@@ -123,4 +123,18 @@ class MovimientoController {
             e.printStackTrace()
         }
     }
+
+    def generarReporte(){
+        Movimiento movimiento=Movimiento.get(params?.id)
+        params.pol=movimiento?.policia?.clave
+        params.armero=movimiento?.armero?.id
+        params.fecha=movimiento?.fecha
+        params.cargadoresEntregados=movimiento?.cargadoresEntregados
+        params.cartuchosEntregados=movimiento?.cartuchosEntregados
+        params.cargadoresRecibidos=movimiento?.cargadoresRecibidos
+        params.cartuchosRecibidos=movimiento?.cartuchosRecibidos
+        params.observaciones=movimiento?.observaciones
+
+        chain(controller: 'jasper', action: 'index',params:params, model: [data:Movimiento.list(max: 1)])
+    }
 }
