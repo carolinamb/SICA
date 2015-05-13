@@ -101,4 +101,8 @@ class PoliciaController {
             '*' { render status: NOT_FOUND }
         }
     }
+    def generarCredencial={
+        //chain(controller: "jasper", action: "index", model: [data: Policia.list()], params:params)
+        chain(controller: "jasper", action: "index", params:params)
+    }
 }
