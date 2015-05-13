@@ -39,7 +39,7 @@
             </div>
 			<g:form url="[resource:adscripcionInstance, action:'delete']" method="DELETE">
                 <div class="btn-group btn-group-xs">
-                    <g:link class="btn btn-warning" action="edit" resource="${armeroInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+                    <g:link class="btn btn-warning" action="edit" resource="${adscripcionInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
                     <g:actionSubmit class="btn btn-danger" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
                 </div>
 			</g:form>
