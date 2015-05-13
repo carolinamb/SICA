@@ -29,10 +29,11 @@
                 <g:render template="datosPolicia"/>
                 <g:form url="[resource:policiaInstance, action:'delete']" method="DELETE">
                     <div class="btn-group btn-group-xs">
-                        <g:link class="btn btn-warning" action="edit" resource="${armeroInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+                        <g:link class="btn btn-warning" action="edit" resource="${policiaInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
                         <g:actionSubmit class="btn btn-danger" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
                     </div>
                 </g:form>
+                <g:jasperReport jasper="credencial" format="PDF" name="Policia" action="generarCredencial" controller="policia" />
             </div>
 		</div>
     </body>
