@@ -46,7 +46,7 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         compile ":scaffolding:2.0.3"
         compile ':cache:1.1.2'
-        compile ":jasper:1.11.0"
+        compile ":jasper:1.10.0"
 
 
         runtime ":jquery:1.11.1"
