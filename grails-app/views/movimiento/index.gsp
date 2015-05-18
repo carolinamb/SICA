@@ -13,6 +13,9 @@
                 <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
                     <g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.movimiento"/>
                 </g:link>
+                <g:link class="btn btn-lg btn-labeled btn-primary" controller="movimiento" action="reporte" format="PDF"
+                        id="reporte"><span
+                        class="btn-label icon fa fa-file-text-o"></span>Generar Reporte</g:link>
             </ul>
         </div>
 		<div id="list-movimiento" class="content scaffold-list" role="main">

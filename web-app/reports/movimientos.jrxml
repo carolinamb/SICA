@@ -13,34 +13,16 @@
 			<rightPen lineWidth="0.5"/>
 		</box>
 	</style>
-	<parameter name="parametroEjemplo" class="java.lang.String"/>
-	<field name="cartuchosEntregados" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR_MOVIMIENTOS" class="java.lang.String"/>
+	<field name="movimientosDS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
 	<detail>
 		<band height="550" splitType="Stretch">
-			<textField>
-				<reportElement x="130" y="4" width="270" height="15" uuid="9a1b1621-8c22-4b81-a92e-e4a50e11c06b"/>
-				<textElement verticalAlignment="Middle">
-					<font fontName="Tahoma" size="8"/>
-					<paragraph leftIndent="3" rightIndent="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{parametroEjemplo}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="130" y="30" width="270" height="15" uuid="9a1b1621-8c22-4b81-a92e-e4a50e11c06b"/>
-				<textElement verticalAlignment="Middle">
-					<font fontName="Tahoma" size="8"/>
-					<paragraph leftIndent="3" rightIndent="3"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{cartuchosEntregados}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="30" y="4" width="100" height="20" uuid="7c30364b-22d8-4a28-9cb7-083fad6d1c35"/>
-				<text><![CDATA[ParametroEjemplo:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="55" y="30" width="100" height="20" uuid="63f95b33-e3be-4137-953f-474150865c92"/>
-				<text><![CDATA[FieldEjemplo:]]></text>
-			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="14" y="50" width="540" height="12" isPrintInFirstWholeBand="true" uuid="e897ce3b-27bf-4971-9540-36bffbcc7b69"/>
+				<parametersMapExpression><![CDATA[new HashMap($P{REPORT_PARAMETERS_MAP})]]></parametersMapExpression>
+				<dataSourceExpression><![CDATA[($F{movimientosDS})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR_MOVIMIENTOS}]]></subreportExpression>
+			</subreport>
 		</band>
 	</detail>
 	<pageFooter>

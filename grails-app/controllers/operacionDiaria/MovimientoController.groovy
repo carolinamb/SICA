@@ -1,5 +1,7 @@
 package operacionDiaria
 
+import dto.reportes.MovimientoDTO
+import dto.reportes.ReporteMovimientoDTO
 import personal.Policia
 
 import static org.springframework.http.HttpStatus.*
@@ -125,8 +127,25 @@ class MovimientoController {
     }
 
     def reporte(){
-        params.parametroEjemplo="123456"
-        List<Movimiento> movimientosList=Movimiento.list(max: 1)
-        chain(controller: "jasper", action: "index", model: [data:movimientosList],params:params)
+        params._file='movimientos'
+        params._format='PDF'
+        params.SUBREPORT_DIR_MOVIMIENTOS = "${servletContext.getRealPath('/reports')}/subReportMovimientos.jasper"
+        ReporteMovimientoDTO reporte=new ReporteMovimientoDTO()
+        def movimientoDTOList=[]
+        List<Movimiento> movimientosList=Movimiento.list()
+        movimientosList.each {movimiento->
+            MovimientoDTO movimientoDTO=new MovimientoDTO()
+            movimientoDTO.setPolicia(movimiento?.policia.clave)
+            movimientoDTO.setCargadoresEntregados(movimiento?.cargadoresEntregados)
+            movimientoDTO.setCargadoresRecibidos(movimiento?.cargadoresRecibidos)
+            movimientoDTO.setCartuchosEntregados(movimiento?.cartuchosEntregados)
+            movimientoDTO.setCartuchosRecibidos(movimiento?.cartuchosRecibidos)
+            movimientoDTO.setObservaciones(movimiento?.observaciones)
+            movimientoDTOList.add(movimientoDTO)
+        }
+        reporte.setMovimientos(movimientoDTOList)
+        List listaMov = new ArrayList()
+        listaMov.add(reporte)
+        chain(controller: "jasper", action: "index", model: [data:listaMov],params:params)
     }
 }
