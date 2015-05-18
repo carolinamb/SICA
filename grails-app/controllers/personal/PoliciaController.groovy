@@ -1,6 +1,6 @@
 package personal
 
-
+import dto.reportes.CredencialDTO
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -102,7 +102,13 @@ class PoliciaController {
         }
     }
     def generarCredencial={
-        //chain(controller: "jasper", action: "index", model: [data: Policia.list()], params:params)
-        chain(controller: "jasper", action: "index", params:params)
+        params._format='PDF'
+        params._file='credencial'
+        List<CredencialDTO> credencial=[]
+        Policia policia=Policia.get(params?.id)
+        CredencialDTO credencialDTO=new CredencialDTO(policia)
+        println credencialDTO.clave
+        credencial.add(credencialDTO)
+        chain(controller: "jasper", action: "index",model: [data:credencial],params:params)
     }
 }

@@ -1,35 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="credencial" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="afcfdaca-49fd-4440-afbe-8d14bcee7a9a">
-	<property name="ireport.zoom" value="1.0"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="credencial" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a4f77ab1-7941-4aa2-885a-e151094bdb4f">
+	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<background>
-		<band splitType="Stretch"/>
-	</background>
-	<title>
-		<band height="79" splitType="Stretch">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="marcoNormal" mode="Opaque">
+		<box>
+			<pen lineWidth="0.5"/>
+			<topPen lineWidth="0.5"/>
+			<leftPen lineWidth="0.5"/>
+			<bottomPen lineWidth="0.5"/>
+			<rightPen lineWidth="0.5"/>
+		</box>
+	</style>
+	<field name="clave" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="primerApellido" class="java.lang.String"/>
+	<field name="segundoApellido" class="java.lang.String"/>
+	<field name="region" class="java.lang.String"/>
+	<field name="puesto" class="java.lang.String"/>
+	<field name="grado" class="java.lang.String"/>
+	<field name="adscripcion" class="java.lang.String"/>
+	<detail>
+		<band height="550" splitType="Stretch">
+			<textField>
+				<reportElement x="130" y="4" width="270" height="20" uuid="9a1b1621-8c22-4b81-a92e-e4a50e11c06b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clave}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="24" width="270" height="20" uuid="9a1b1621-8c22-4b81-a92e-e4a50e11c06b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="44" width="270" height="20" uuid="9a1b1621-8c22-4b81-a92e-e4a50e11c06b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{primerApellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="64" width="270" height="20" uuid="9a1b1621-8c22-4b81-a92e-e4a50e11c06b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{segundoApellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="84" width="270" height="20" uuid="9a1b1621-8c22-4b81-a92e-e4a50e11c06b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{region}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="104" width="270" height="20" uuid="9a1b1621-8c22-4b81-a92e-e4a50e11c06b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{puesto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="124" width="270" height="20" uuid="9a1b1621-8c22-4b81-a92e-e4a50e11c06b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{grado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="144" width="270" height="20" uuid="9a1b1621-8c22-4b81-a92e-e4a50e11c06b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8"/>
+					<paragraph leftIndent="3" rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adscripcion}]]></textFieldExpression>
+			</textField>
 			<staticText>
-				<reportElement x="124" y="45" width="368" height="20" uuid="cbb52950-f313-4b21-8727-56ddba10bd2e"/>
-				<text><![CDATA[ESTE ES UN LABEL DE EJEMPLO]]></text>
+				<reportElement x="30" y="4" width="100" height="20" uuid="7c30364b-22d8-4a28-9cb7-083fad6d1c35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clave:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="24" width="100" height="20" uuid="63f95b33-e3be-4137-953f-474150865c92"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="44" width="100" height="20" uuid="9ea7585d-31a1-4f94-b1d9-1a0dddcb1b3e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Primer apellido:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="64" width="100" height="20" uuid="34e64183-aaeb-4403-86ce-4bf8859b77c9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Segundo apellido:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="84" width="100" height="20" uuid="1533ed56-d093-411f-b5b0-ac43aa2dea49"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Región:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="104" width="100" height="20" uuid="fd7026ca-9d10-40e6-97dd-55036ddfa5f8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Puesto:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="124" width="100" height="20" uuid="a6768927-619d-446c-b468-b507dbbb71a6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="144" width="100" height="20" uuid="efc48c89-b1dc-4a84-9729-de02786923d1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adscripcion:]]></text>
 			</staticText>
 		</band>
-	</title>
-	<pageHeader>
-		<band height="35" splitType="Stretch"/>
-	</pageHeader>
-	<columnHeader>
-		<band height="61" splitType="Stretch"/>
-	</columnHeader>
-	<detail>
-		<band height="125" splitType="Stretch"/>
 	</detail>
-	<columnFooter>
-		<band height="45" splitType="Stretch"/>
-	</columnFooter>
 	<pageFooter>
-		<band height="54" splitType="Stretch"/>
+		<band height="20" splitType="Stretch"/>
 	</pageFooter>
-	<summary>
-		<band height="42" splitType="Stretch"/>
-	</summary>
 </jasperReport>
