@@ -76,6 +76,15 @@
             </div>
         </g:if>
 
+        <g:if test="${policiaInstance?.turno}">
+            <div class="fieldcontain col-sm-6">
+                <span id="turno-label" class="property-label"><g:message code="policia.turno.label" default="Turno" /></span>
+
+                <span class="property-value" aria-labelledby="turno-label"><g:link controller="turno" action="show" id="${policiaInstance?.turno?.id}">${policiaInstance?.turno?.descripcion?.encodeAsHTML()}</g:link></span>
+
+            </div>
+        </g:if>
+
         <g:if test="${policiaInstance?.cartuchosAbastecidos}">
             <div class="fieldcontain col-sm-6">
                 <span id="cartuchosAbastecidos-label" class="property-label"><g:message code="policia.cartuchosAbastecidos.label" default="Cartuchos Abastecidos" /></span>

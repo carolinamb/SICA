@@ -39,6 +39,8 @@
 
                             <th><g:message code="policia.puesto.label" default="Puesto" /></th>
 
+                            <th><g:message code="policia.turno.label" default="Turno" /></th>
+
                         </tr>
                         </thead>
                         <tbody>
@@ -56,6 +58,8 @@
                                     <td>${fieldValue(bean: policiaInstance?.region, field: "descripcion")}</td>
 
                                     <td>${fieldValue(bean: policiaInstance?.puesto, field: "descripcion")}</td>
+
+                                    <td>${fieldValue(bean: policiaInstance?.turno, field: "descripcion")}</td>
                                 </tr>
                             </g:each>
                         </tbody>

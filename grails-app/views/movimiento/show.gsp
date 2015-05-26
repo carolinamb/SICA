@@ -100,6 +100,18 @@
                         </div>
                     </g:if>
 
+                    <g:if test="${movimientoInstance?.armasOcupadas}">
+                        <div class="fieldcontain col-sm-6">
+                            <span id="armasEntregadas-label" class="property-label col-sm-4 text-bold"><g:message code="movimiento.armasEntregadas.label" default="Armas Entregadas al Policia:" /></span>
+
+                            <span class="property-value col-sm-8" aria-labelledby="armasEntregadas-label">
+                            <g:each in="${movimientoInstance.armasOcupadas}" var="arma" status="i">
+                                Arma ${i+1}:${arma}</span>
+                            </g:each>
+
+                        </div>
+                    </g:if>
+
                     <g:if test="${movimientoInstance?.observaciones}">
                         <div class="fieldcontain col-sm-6">
                            <span id="observaciones-label" class="property-label col-sm-4 text-bold"><g:message code="movimiento.observaciones.label" default="Observaciones:" /></span>

@@ -46,7 +46,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:field name="calibre" class="form-control" type="number" required="" value="${armaInstance.calibre}"/>
+                <g:textField name="calibre" class="form-control" type="number" required="" value="${armaInstance.calibre}"/>
             </div>
         </div>
 
