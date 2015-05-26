@@ -17,4 +17,7 @@ class Arma {
         matricula nullable: false
 
     }
+    public String toString(){
+        return this.modelo+"/"+this.tipo+"/"+this.matricula
+    }
 }

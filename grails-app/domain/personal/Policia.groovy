@@ -2,6 +2,7 @@ package personal
 
 import armamento.Arma
 import armamento.Cartucho
+import catalogo.Turno
 
 class Policia {
 
@@ -16,6 +17,8 @@ class Policia {
     Puesto puesto
     Grado grado
     Adscripcion adscripcion
+    Turno turno
+
 
     static hasMany = [armas:Arma,cartuchos:Cartucho]
 
@@ -28,6 +31,7 @@ class Policia {
         puesto nullable: false
         grado nullable: false
         adscripcion nullable: false
+        turno nullable: false
         cartuchosAbastecidos nullable: false
         cargadoresAbastecidos nullable: false
         armas nullable:true
