@@ -25,19 +25,20 @@ class BootStrap {
 
         //DATOS DE PRUEBA
         Region region=new Region(descripcion: 'Region uno').save(flush: true)
-        Adscripcion adscripcion=new Adscripcion(descripcion: 'adscripcion uno').save(flush: true)
-        Turno turno=new Turno(descripcion: 'turno uno').save(flush: true)
-        Puesto puesto=new Puesto(descripcion: 'puesto uno').save(flush: true)
-        Grado grado=new Grado(descripcion: 'Grado uno').save(flush: true)
+        Adscripcion adscripcion=new Adscripcion(descripcion: 'Trancito').save(flush: true)
+        Turno turno=new Turno(descripcion: 'Turno uno').save(flush: true)
+        Puesto puesto=new Puesto(descripcion: 'Secretario').save(flush: true)
+        Grado grado=new Grado(descripcion: 'Comosario Jefe').save(flush: true)
         Policia policia=new Policia(
                 clave: '12345',
-                nombre: 'Angel',
-                primerApellido: 'Hernandez',
-                segundoApellido: 'Gonzalez',
+                nombre: 'Alejandro',
+                primerApellido: 'Rojo',
+                segundoApellido: 'Rico',
                 puesto: 1,
                 region:1,
                 adscripcion:1,
                 grado: 1,
+                turno: 1,
                 cargadoresAbastecidos: 3,
                 cartuchosAbastecidos: 40).save(flush: true)
         Armero armero=new Armero(nombre: 'Juan',primerApellido: 'Perez',segundoApellido:  'Lopez',turno:1).save(flush: true)
