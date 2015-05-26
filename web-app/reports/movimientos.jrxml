@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="movimientos" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a4f77ab1-7941-4aa2-885a-e151094bdb4f">
 	<property name="ireport.zoom" value="1.5"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.x" value="327"/>
+	<property name="ireport.y" value="2"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="marcoNormal" mode="Opaque">
 		<box>
@@ -18,52 +18,77 @@
 	<detail>
 		<band height="550" splitType="Stretch">
 			<subreport>
-				<reportElement positionType="Float" x="14" y="70" width="542" height="12" isPrintInFirstWholeBand="true" uuid="e897ce3b-27bf-4971-9540-36bffbcc7b69"/>
+				<reportElement positionType="Float" x="-16" y="70" width="570" height="12" isPrintInFirstWholeBand="true" uuid="e897ce3b-27bf-4971-9540-36bffbcc7b69"/>
 				<parametersMapExpression><![CDATA[new HashMap($P{REPORT_PARAMETERS_MAP})]]></parametersMapExpression>
 				<dataSourceExpression><![CDATA[($F{movimientosDS})]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR_MOVIMIENTOS}]]></subreportExpression>
 			</subreport>
 			<staticText>
-				<reportElement style="marcoNormal" mode="Opaque" x="14" y="30" width="59" height="40" uuid="14e8fe44-4935-4f3a-b176-e15524bf5107"/>
+				<reportElement style="marcoNormal" mode="Opaque" x="-16" y="30" width="59" height="40" uuid="14e8fe44-4935-4f3a-b176-e15524bf5107"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Policia]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="marcoNormal" x="73" y="30" width="55" height="40" uuid="55391a12-007d-4ffb-9c13-d16385ed7f57"/>
+				<reportElement style="marcoNormal" x="141" y="30" width="55" height="40" uuid="55391a12-007d-4ffb-9c13-d16385ed7f57"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Cartuchos Entregados]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="marcoNormal" x="128" y="30" width="55" height="40" uuid="f7e41548-e53e-4489-a6cd-3e2399db24bb"/>
+				<reportElement style="marcoNormal" x="196" y="30" width="55" height="40" uuid="f7e41548-e53e-4489-a6cd-3e2399db24bb"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Cartuchos Recibidos]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="marcoNormal" x="183" y="30" width="55" height="40" uuid="a3c0c53c-9eb4-4580-8735-c63d010b2725"/>
+				<reportElement style="marcoNormal" x="251" y="30" width="55" height="40" uuid="a3c0c53c-9eb4-4580-8735-c63d010b2725"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Cargadores Recibidos]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="marcoNormal" x="238" y="30" width="55" height="40" uuid="5bab651f-af07-4d8e-a043-113de9e2d5b0"/>
+				<reportElement style="marcoNormal" x="306" y="30" width="60" height="40" uuid="5bab651f-af07-4d8e-a043-113de9e2d5b0"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Cargadores Entregados]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="marcoNormal" x="293" y="30" width="263" height="40" uuid="abeeca7d-0ae8-4475-a8a1-c1f2b8fbf1a3"/>
+				<reportElement style="marcoNormal" x="366" y="30" width="51" height="40" uuid="5bab651f-af07-4d8e-a043-113de9e2d5b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Turno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="marcoNormal" x="417" y="30" width="137" height="40" uuid="abeeca7d-0ae8-4475-a8a1-c1f2b8fbf1a3"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Observaciones]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="0" width="208" height="20" uuid="b33bd2b8-c51e-4770-aec5-dd96a390cdc2"/>
+				<text><![CDATA[REPORTE DIARIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="marcoNormal" x="43" y="30" width="45" height="40" uuid="54b702d5-7aba-44b0-87a8-1c017a695bcb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Armas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="marcoNormal" x="88" y="30" width="53" height="40" uuid="17fa4564-2696-488f-b806-6fa0d09d0f12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Region]]></text>
 			</staticText>
 		</band>
 	</detail>

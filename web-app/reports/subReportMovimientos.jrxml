@@ -10,16 +10,19 @@
 		<![CDATA[]]>
 	</queryString>
 	<field name="policia" class="java.lang.String"/>
+	<field name="armas" class="java.lang.String"/>
+	<field name="region" class="java.lang.String"/>
 	<field name="cartuchosEntregados" class="java.lang.String"/>
 	<field name="cartuchosRecibidos" class="java.lang.String"/>
 	<field name="cargadoresEntregados" class="java.lang.Long"/>
 	<field name="cargadoresRecibidos" class="java.lang.Long"/>
 	<field name="observaciones" class="java.lang.String"/>
+	<field name="turno" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="16" splitType="Stretch">
+		<band height="24" splitType="Stretch">
 			<textField pattern="" isBlankWhenNull="true">
 				<reportElement x="0" y="0" width="59" height="16" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
 				<box>
@@ -35,7 +38,35 @@
 				<textFieldExpression><![CDATA[$F{policia}]]></textFieldExpression>
 			</textField>
 			<textField pattern="" isBlankWhenNull="true">
-				<reportElement x="59" y="0" width="55" height="16" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
+				<reportElement x="59" y="0" width="46" height="16" backcolor="#CCCCCC" uuid="b95e8f7d-09f6-485c-ae26-53d2072abe4e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{armasOcupadas}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="105" y="0" width="54" height="16" backcolor="#CCCCCC" uuid="164fd941-322c-4439-a5f1-6109ae547d7a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{region}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="159" y="0" width="55" height="16" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -49,7 +80,7 @@
 				<textFieldExpression><![CDATA[$F{cartuchosEntregados}]]></textFieldExpression>
 			</textField>
 			<textField pattern="" isBlankWhenNull="true">
-				<reportElement x="114" y="0" width="55" height="16" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
+				<reportElement x="214" y="0" width="55" height="16" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -63,7 +94,7 @@
 				<textFieldExpression><![CDATA[$F{cartuchosRecibidos}]]></textFieldExpression>
 			</textField>
 			<textField pattern="" isBlankWhenNull="true">
-				<reportElement x="224" y="0" width="55" height="16" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
+				<reportElement x="324" y="0" width="55" height="16" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -77,7 +108,7 @@
 				<textFieldExpression><![CDATA[$F{cargadoresEntregados}]]></textFieldExpression>
 			</textField>
 			<textField pattern="" isBlankWhenNull="true">
-				<reportElement x="169" y="0" width="55" height="16" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
+				<reportElement x="269" y="0" width="55" height="16" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -91,7 +122,21 @@
 				<textFieldExpression><![CDATA[$F{cargadoresRecibidos}]]></textFieldExpression>
 			</textField>
 			<textField pattern="" isBlankWhenNull="true">
-				<reportElement x="279" y="0" width="263" height="16" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
+				<reportElement x="379" y="0" width="42" height="16" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{turno}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="421" y="0" width="208" height="16" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
