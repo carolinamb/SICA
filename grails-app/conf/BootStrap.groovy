@@ -25,7 +25,7 @@ class BootStrap {
 
         //DATOS DE PRUEBA
         Region region=new Region(descripcion: 'Region uno').save(flush: true)
-        Adscripcion adscripcion=new Adscripcion(descripcion: 'Trancito').save(flush: true)
+        Adscripcion adscripcion=new Adscripcion(descripcion: 'Transito').save(flush: true)
         Turno turno=new Turno(descripcion: 'Turno uno').save(flush: true)
         Puesto puesto=new Puesto(descripcion: 'Secretario').save(flush: true)
         Grado grado=new Grado(descripcion: 'Comosario Jefe').save(flush: true)
