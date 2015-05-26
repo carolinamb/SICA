@@ -14,12 +14,27 @@ class MovimientoDTO {
     private Long cargadoresEntregados
     private Long cargadoresRecibidos
     private String observaciones
+    private String turno
+    private String armas
+    private String region
 
     public getPolicia() {
         return this.policia
     }
     public void setPolicia(String policia) {
         this.policia = policia
+    }
+    public getArmas() {
+        return this.armas
+    }
+    public void setArmas(String armas) {
+        this.armas = armas
+    }
+    public getRegion() {
+        return this.region
+    }
+    public void setRegion(String region) {
+        this.region = region
     }
     public getCartuchosEntregados() {
         return this.cartuchosEntregados
@@ -50,5 +65,11 @@ class MovimientoDTO {
     }
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones
+    }
+    public getTurno() {
+        return this.turno
+    }
+    public void setTurno(String turno) {
+        this.turno = turno
     }
 }
