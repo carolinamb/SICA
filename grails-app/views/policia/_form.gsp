@@ -17,7 +17,7 @@
 		        <span class="required-indicator">*</span>
 	        </label>
             <div class="col-sm-10">
-	             <g:textField name="clave" required="" value="${policiaInstance?.clave}"/>
+	             <g:textField name="clave" required="" value="${policiaInstance?.clave}" class="form-control"/>
             </div>
         </div>
 
@@ -37,7 +37,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:textField name="primerApellido" required="" value="${policiaInstance?.primerApellido}"/>
+                <g:textField name="primerApellido" required="" value="${policiaInstance?.primerApellido}" class="form-control"/>
             </div>
         </div>
 
@@ -47,7 +47,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:textField name="segundoApellido" required="" value="${policiaInstance?.segundoApellido}"/>
+                <g:textField name="segundoApellido" required="" value="${policiaInstance?.segundoApellido}" class="form-control"/>
             </div>
         </div>
 
@@ -57,7 +57,7 @@
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:select id="region" name="region.id" from="${personal.Region.list()}" optionValue="descripcion" optionKey="id" required="" value="${policiaInstance?.region?.id}" />
+                <g:select id="region" name="region.id" from="${personal.Region.list()}" optionValue="descripcion" optionKey="id" required="" value="${policiaInstance?.region?.id}" class="form-control many-to-one"/>
             </div>
         </div>
 
@@ -102,7 +102,7 @@
         </div>
 
         <div class="fieldcontain ${hasErrors(bean: policiaInstance, field: 'cartuchosAbastecidos', 'error')} required form-group col-sm-6">
-            <label for="cartuchosRecomendados">
+            <label for="cartuchosAbastecidos" class="col-sm-2 control-label">
                 <g:message code="policia.cartuchosRecomendados.label" default="Cartuchos Abastecidos" />
                 <span class="required-indicator">*</span>
             </label>
@@ -112,7 +112,7 @@
         </div>
 
         <div class="fieldcontain ${hasErrors(bean: policiaInstance, field: 'cargadoresAbastecidos', 'error')} required form-group col-sm-6">
-            <label for="cargadoresRecomendados">
+            <label for="cargadoresAbastecidos" class="col-sm-2 control-label">
                 <g:message code="policia.cargadoresRecomendados.label" default="Cargadores Abastecidos" />
                 <span class="required-indicator">*</span>
             </label>

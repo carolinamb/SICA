@@ -140,7 +140,7 @@ class MovimientoController {
             movimientoDTO.setPolicia(movimiento?.policia.clave)
             movimientoDTO.setRegion(movimiento?.policia.region.descripcion)
             if (movimiento?.armasOcupadas.size()>1)
-                signoComa=","
+                signoComa=", "
             movimiento?.armasOcupadas.each {arma->
                 armasOcupadas=armasOcupadas+arma.toString()+signoComa
             }
