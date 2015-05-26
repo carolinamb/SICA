@@ -130,12 +130,12 @@ class MovimientoController {
         params._file='movimientos'
         params._format='PDF'
         params.SUBREPORT_DIR_MOVIMIENTOS = "${servletContext.getRealPath('/reports')}/subReportMovimientos.jasper"
-        String armasOcupadas=""
         String signoComa=""
         ReporteMovimientoDTO reporte=new ReporteMovimientoDTO()
         def movimientoDTOList=[]
         List<Movimiento> movimientosList=Movimiento.list()
         movimientosList.each {movimiento->
+            String armasOcupadas=""
             MovimientoDTO movimientoDTO=new MovimientoDTO()
             movimientoDTO.setPolicia(movimiento?.policia.clave)
             movimientoDTO.setRegion(movimiento?.policia.region.descripcion)
