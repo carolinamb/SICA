@@ -12,26 +12,16 @@ class Movimiento {
     Turno turno
     static hasMany = [armasOcupadas:Arma]
 
-    String cartuchosEntregados
-    String cartuchosRecibidos
-    Long cargadoresEntregados
-    Long cargadoresRecibidos
-    Date fecha
-    String observaciones
-
-
+    Date fechaEntrega
+    Date fechaRecepcion
 
     static constraints = {
         policia nullable: false
         armasOcupadas nullable: true
         armero nullable: false
         turno nullable: false
-        cartuchosEntregados nullable: true
-        cartuchosRecibidos nullable: true
-        cargadoresEntregados nullable: true
-        cargadoresRecibidos nullable: true
-        fecha nullable: true
-        observaciones nullable: true
+        fechaEntrega nullable: true
+        fechaRecepcion nullable: true
     }
 
 }
