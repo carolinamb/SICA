@@ -55,47 +55,20 @@
                         </div>
                     </g:if>
 
-                    <g:if test="${movimientoInstance?.cartuchosEntregados}">
+                    <g:if test="${movimientoInstance?.fechaEntrega}">
                         <div class="fieldcontain col-sm-6">
-                           <span id="cartuchosEntregados-label" class="property-label col-sm-4 text-bold"><g:message code="movimiento.cartuchosEntregados.label" default="Cartuchos Entregados:" /></span>
+                           <span id="fechaEntrega-label" class="property-label col-sm-4 text-bold"><g:message code="movimiento.fechaEntrega.label" default="Fecha y Hora de Entrega:" /></span>
 
-                            <span class="property-value col-sm-8" aria-labelledby="cartuchosEntregados-label"><g:fieldValue bean="${movimientoInstance}" field="cartuchosEntregados"/></span>
+                            <span class="property-valu col-sm-8e" aria-labelledby="fechaEntrega-label"><g:formatDate date="${movimientoInstance?.fechaEntrega}" /></span>
 
                         </div>
                     </g:if>
 
-                    <g:if test="${movimientoInstance?.cartuchosRecibidos}">
+                    <g:if test="${movimientoInstance?.fechaRecepcion}">
                         <div class="fieldcontain col-sm-6">
-                           <span id="cartuchosRecibidos-label" class="property-label col-sm-4 text-bold"><g:message code="movimiento.cartuchosRecibidos.label" default="Cartuchos Recibidos:" /></span>
+                           <span id="fechaRecepcion-label" class="property-label col-sm-4 text-bold"><g:message code="movimiento.fechaRecepcion.label" default="Fecha y Hora de Recepcion:" /></span>
 
-                            <span class="property-value col-sm-8" aria-labelledby="cartuchosRecibidos-label"><g:fieldValue bean="${movimientoInstance}" field="cartuchosRecibidos"/></span>
-
-                        </div>
-                    </g:if>
-
-                    <g:if test="${movimientoInstance?.cargadoresEntregados}">
-                        <div class="fieldcontain col-sm-6">
-                           <span id="cargadoresEntregados-label" class="property-label col-sm-4 text-bold"><g:message code="movimiento.cargadoresEntregados.label" default="Cargadores Entregados:" /></span>
-
-                            <span class="property-value col-sm-8" aria-labelledby="cargadoresEntregados-label"><g:fieldValue bean="${movimientoInstance}" field="cargadoresEntregados"/></span>
-
-                        </div>
-                    </g:if>
-
-                    <g:if test="${movimientoInstance?.cargadoresRecibidos}">
-                        <div class="fieldcontain col-sm-6">
-                           <span id="cargadoresRecibidos-label" class="property-label col-sm-4 text-bold"><g:message code="movimiento.cargadoresRecibidos.label" default="Cargadores Recibidos:" /></span>
-
-                            <span class="property-value col-sm-8" aria-labelledby="cargadoresRecibidos-label"><g:fieldValue bean="${movimientoInstance}" field="cargadoresRecibidos"/></span>
-
-                        </div>
-                    </g:if>
-
-                    <g:if test="${movimientoInstance?.fecha}">
-                        <div class="fieldcontain col-sm-6">
-                           <span id="fecha-label" class="property-label col-sm-4 text-bold"><g:message code="movimiento.fecha.label" default="Fecha:" /></span>
-
-                            <span class="property-valu col-sm-8e" aria-labelledby="fecha-label"><g:formatDate date="${movimientoInstance?.fecha}" /></span>
+                            <span class="property-valu col-sm-8e" aria-labelledby="fechaRecepcion-label"><g:formatDate date="${movimientoInstance?.fechaRecepcion}" /></span>
 
                         </div>
                     </g:if>
@@ -108,15 +81,6 @@
                             <g:each in="${movimientoInstance.armasOcupadas}" var="arma" status="i">
                                 Arma ${i+1}:${arma}</span>
                             </g:each>
-
-                        </div>
-                    </g:if>
-
-                    <g:if test="${movimientoInstance?.observaciones}">
-                        <div class="fieldcontain col-sm-6">
-                           <span id="observaciones-label" class="property-label col-sm-4 text-bold"><g:message code="movimiento.observaciones.label" default="Observaciones:" /></span>
-
-                            <span class="property-value col-sm-8" aria-labelledby="observaciones-label"><g:fieldValue bean="${movimientoInstance}" field="observaciones"/></span>
 
                         </div>
                     </g:if>

@@ -37,7 +37,10 @@ class MovimientoController {
             return
         }
 
-        movimientoInstance.setFecha(new Date())
+        if (!movimientoInstance?.fechaEntrega)
+            movimientoInstance.setFechaEntrega(new Date())
+        else
+            movimientoInstance.setFechaRecepcion(new Date())
 
         movimientoInstance.save flush:true
 

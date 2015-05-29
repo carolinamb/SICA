@@ -36,13 +36,11 @@
 
                             <g:sortableColumn property="turno" title="${message(code: 'armero.turno.label', default: 'Turno')}" />
 
-                            <g:sortableColumn property="cartuchosEntregados" title="${message(code: 'movimiento.cartuchosEntregados.label', default: 'Cartuchos Entregados')}" />
+                            <g:sortableColumn property="fechaEntrega" title="${message(code: 'armero.fechaEntrega.label', default: 'Fecha y Hora de Entrega')}" />
 
-                            <g:sortableColumn property="cartuchosRecibidos" title="${message(code: 'movimiento.cartuchosRecibidos.label', default: 'Cartuchos Recibidos')}" />
+                            <g:sortableColumn property="fechaRecepcion" title="${message(code: 'armero.fechaRecepcion.label', default: 'Fecha y Hora de Recepci&oacute;n')}" />
 
-                            <g:sortableColumn property="cargadoresEntregados" title="${message(code: 'movimiento.cargadoresEntregados.label', default: 'Cargadores Entregados')}" />
-
-                            <g:sortableColumn property="cargadoresRecibidos" title="${message(code: 'movimiento.cargadoresRecibidos.label', default: 'Cargadores Recibidos')}" />
+                            <th>Alertas de Entrega</th>
 
                         </tr>
                         </thead>
@@ -55,13 +53,14 @@
 
                                     <td>${fieldValue(bean: movimientoInstance?.turno, field: "descripcion")}</td>
 
-                                    <td>${fieldValue(bean: movimientoInstance, field: "cartuchosEntregados")}</td>
+                                    <td>${fieldValue(bean: movimientoInstance, field: "fechaEntrega")}</td>
 
-                                    <td>${fieldValue(bean: movimientoInstance, field: "cartuchosRecibidos")}</td>
+                                    <td>${fieldValue(bean: movimientoInstance, field: "fechaRecepcion")}</td>
 
-                                    <td>${fieldValue(bean: movimientoInstance, field: "cargadoresEntregados")}</td>
-
-                                    <td>${fieldValue(bean: movimientoInstance, field: "cargadoresRecibidos")}</td>
+                                    <td>
+                                        <g:if test="${movimientoInstance?.fechaRecepcion}"><div style="background-color: #358035;">.</div></g:if>
+                                        <g:else><div style="background-color: #d2322d;">.</div></g:else>
+                                    </td>
 
 					            </tr>
 				            </g:each>
