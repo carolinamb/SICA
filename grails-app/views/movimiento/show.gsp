@@ -81,6 +81,10 @@
                             <g:each in="${movimientoInstance.armasOcupadas}" var="arma" status="i">
                                 Arma ${i+1}:${arma}</span>
                             </g:each>
+                            <ul>
+                                <g:each in="${movimientoInstance?.armasOcupadas}" var="armaOcupada" status="i"><li>
+                                    ${armaOcupada}</li></g:each>
+                            </ul>
 
                         </div>
                     </g:if>
