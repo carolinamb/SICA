@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="movimientosTable" language="groovy" pageWidth="720" pageHeight="54" columnWidth="542" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2e38f770-e311-4849-8b24-47d20776cc2f">
 	<property name="ireport.zoom" value="1.2100000000000006"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.x" value="258"/>
 	<property name="ireport.y" value="0"/>
 	<style name="identificadores" mode="Opaque" backcolor="#C0C0C0"/>
 	<style name="separadores" mode="Opaque" forecolor="#FFFFFF" backcolor="#000000"/>
@@ -9,14 +9,11 @@
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
+	<field name="fechaEntrega" class="java.lang.String"/>
+	<field name="fechaRecepcion" class="java.lang.String"/>
 	<field name="policia" class="java.lang.String"/>
 	<field name="armas" class="java.lang.String"/>
 	<field name="region" class="java.lang.String"/>
-	<field name="cartuchosEntregados" class="java.lang.String"/>
-	<field name="cartuchosRecibidos" class="java.lang.String"/>
-	<field name="cargadoresEntregados" class="java.lang.Long"/>
-	<field name="cargadoresRecibidos" class="java.lang.Long"/>
-	<field name="observaciones" class="java.lang.String"/>
 	<field name="turno" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
@@ -38,7 +35,7 @@
 				<textFieldExpression><![CDATA[$F{policia}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
-				<reportElement x="101" y="0" width="115" height="54" isPrintWhenDetailOverflows="true" backcolor="#CCCCCC" uuid="b95e8f7d-09f6-485c-ae26-53d2072abe4e"/>
+				<reportElement x="101" y="0" width="141" height="54" isPrintWhenDetailOverflows="true" backcolor="#CCCCCC" uuid="b95e8f7d-09f6-485c-ae26-53d2072abe4e"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -52,7 +49,7 @@
 				<textFieldExpression><![CDATA[$F{armas}]]></textFieldExpression>
 			</textField>
 			<textField pattern="" isBlankWhenNull="true">
-				<reportElement x="216" y="0" width="91" height="54" backcolor="#CCCCCC" uuid="164fd941-322c-4439-a5f1-6109ae547d7a"/>
+				<reportElement x="242" y="0" width="91" height="54" backcolor="#CCCCCC" uuid="164fd941-322c-4439-a5f1-6109ae547d7a"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -66,63 +63,7 @@
 				<textFieldExpression><![CDATA[$F{region}]]></textFieldExpression>
 			</textField>
 			<textField pattern="" isBlankWhenNull="true">
-				<reportElement x="307" y="0" width="55" height="54" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
-				<box>
-					<pen lineWidth="0.5"/>
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{cartuchosEntregados}]]></textFieldExpression>
-			</textField>
-			<textField pattern="" isBlankWhenNull="true">
-				<reportElement x="362" y="0" width="55" height="54" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
-				<box>
-					<pen lineWidth="0.5"/>
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{cartuchosRecibidos}]]></textFieldExpression>
-			</textField>
-			<textField pattern="" isBlankWhenNull="true">
-				<reportElement x="472" y="0" width="60" height="54" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
-				<box>
-					<pen lineWidth="0.5"/>
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{cargadoresEntregados}]]></textFieldExpression>
-			</textField>
-			<textField pattern="" isBlankWhenNull="true">
-				<reportElement x="417" y="0" width="55" height="54" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
-				<box>
-					<pen lineWidth="0.5"/>
-					<topPen lineWidth="0.5"/>
-					<leftPen lineWidth="0.5"/>
-					<bottomPen lineWidth="0.5"/>
-					<rightPen lineWidth="0.5"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{cargadoresRecibidos}]]></textFieldExpression>
-			</textField>
-			<textField pattern="" isBlankWhenNull="true">
-				<reportElement x="532" y="0" width="51" height="54" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
+				<reportElement x="333" y="0" width="122" height="54" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -135,8 +76,8 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{turno}]]></textFieldExpression>
 			</textField>
-			<textField pattern="" isBlankWhenNull="true">
-				<reportElement x="583" y="0" width="137" height="54" backcolor="#CCCCCC" uuid="ef75aedd-349a-4e69-8fcd-4729be2cee3c"/>
+			<textField>
+				<reportElement x="455" y="0" width="130" height="54" uuid="63738ec5-d534-4425-9b67-6e70a6dcea1f"/>
 				<box>
 					<pen lineWidth="0.5"/>
 					<topPen lineWidth="0.5"/>
@@ -147,7 +88,21 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{observaciones}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{fechaEntrega}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="585" y="0" width="135" height="54" uuid="7a8757ae-0dca-4395-ba92-4a29210b968d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaRecepcion}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
