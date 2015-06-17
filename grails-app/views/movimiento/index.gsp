@@ -32,6 +32,8 @@
                         <tr>
                             <g:sortableColumn property="policia" title="${message(code: 'armero.policia.label', default: 'Policia')}" />
 
+                            <th>Armas Ocupadas</th>
+
                             <g:sortableColumn property="armero" title="${message(code: 'armero.armero.label', default: 'Armero')}" />
 
                             <g:sortableColumn property="turno" title="${message(code: 'armero.turno.label', default: 'Turno')}" />
@@ -48,6 +50,14 @@
 				            <g:each in="${movimientoInstanceList}" status="i" var="movimientoInstance">
                                 <tr class="${(i % 2) == 0 ? 'even' : 'odd'} mouse-over" onclick='document.location = "<g:createLink action='show' id='${movimientoInstance.id}'/>"'>
 						            <td>${fieldValue(bean: movimientoInstance?.policia, field: "clave")}</td>
+
+                                    <td>
+                                        <ul>
+                                            <g:each in="${movimientoInstance.armasOcupadas}" status="a" var="armaOcupada">
+                                                <li>${armaOcupada}</li>
+                                            </g:each>
+                                        </ul>
+                                    </td>
 					
                                     <td>${fieldValue(bean: movimientoInstance?.armero, field: "id")}</td>
 
@@ -63,6 +73,7 @@
                                     </td>
 
 					            </tr>
+
 				            </g:each>
 			        	</tbody>
 			        </table>
