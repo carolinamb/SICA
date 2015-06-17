@@ -134,6 +134,7 @@ class MovimientoController {
         params._format='PDF'
         params.SUBREPORT_DIR_MOVIMIENTOS = "${servletContext.getRealPath('/reports')}/subReportMovimientos.jasper"
         String signoComa=""
+        String valorNullo=""
         ReporteMovimientoDTO reporte=new ReporteMovimientoDTO()
         def movimientoDTOList=[]
         List<Movimiento> movimientosList=Movimiento.list()
@@ -148,12 +149,11 @@ class MovimientoController {
                 armasOcupadas=armasOcupadas+arma.toString()+signoComa
             }
             movimientoDTO.setArmas(armasOcupadas)
-            movimientoDTO.setCargadoresEntregados(movimiento?.cargadoresEntregados)
-            movimientoDTO.setCargadoresRecibidos(movimiento?.cargadoresRecibidos)
-            movimientoDTO.setCartuchosEntregados(movimiento?.cartuchosEntregados)
-            movimientoDTO.setCartuchosRecibidos(movimiento?.cartuchosRecibidos)
-            movimientoDTO.setObservaciones(movimiento?.observaciones)
             movimientoDTO.setTurno(movimiento?.policia.turno.descripcion)
+            if (movimiento?.fechaRecepcion){ movimientoDTO.setFechaRecepcion(movimiento?.fechaRecepcion.format("dd-MM-yyyy HH:mm:ss.S").toString())
+            }else{movimientoDTO.setFechaRecepcion("Arma No Entregada")}
+
+            movimientoDTO.setFechaEntrega(movimiento?.fechaEntrega.format("dd-MM-yyyy HH:mm:ss.S").toString())
             movimientoDTOList.add(movimientoDTO)
         }
         reporte.setMovimientos(movimientoDTOList)
