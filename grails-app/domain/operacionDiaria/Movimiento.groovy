@@ -12,6 +12,7 @@ class Movimiento {
     Turno turno
     static hasMany = [armasOcupadas:Arma]
 
+
     Date fechaEntrega
     Date fechaRecepcion
 
