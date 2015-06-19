@@ -30,10 +30,8 @@
                     <g:if test="${gradoInstance?.descripcion}">
                         <div class="fieldcontain col-sm-6">
                            <span id="descripcion-label" class="property-label col-sm-4 text-bold"><g:message code="grado.descripcion.label" default="Descripcion" /></span>
-					
-						    <span class="property-value col-sm-8" aria-labelledby="descripcion-label"><g:fieldValue bean="${gradoInstance}" field="descripcion"/></span>
-					
-				        </div>
+						        <span class="property-value col-sm-8" aria-labelledby="descripcion-label"><g:fieldValue bean="${gradoInstance}" field="descripcion"/></span>
+                        </div>
 				    </g:if>
                 </div>
 			</div>
