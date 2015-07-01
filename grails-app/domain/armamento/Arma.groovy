@@ -7,6 +7,12 @@ class Arma {
     String modelo
     String calibre
     String matricula
+    Boolean estatus
+    /*
+    * STATUS:
+    * true--->Activo
+    * false-->Borrado logicamente
+    * */
 
     static constraints = {
 
@@ -15,7 +21,11 @@ class Arma {
         modelo nullable: false
         calibre nullable: false
         matricula nullable: false
+        estatus nullable: true
+    }
 
+    def beforeInsert(){
+        this.estatus=true
     }
     public String toString(){
         return this.modelo+"/"+this.tipo+"/"+this.matricula
