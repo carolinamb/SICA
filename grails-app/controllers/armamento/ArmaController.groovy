@@ -12,7 +12,9 @@ class ArmaController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Arma.list(params), model: [armaInstanceCount: Arma.count()]
+        List<Arma> armaList=Arma.findAllByEstatus(true,params)
+        def total=Arma.countByEstatus(true)
+        respond armaList, model: [armaInstanceCount: total]
     }
 
     def show(Arma armaInstance) {
@@ -81,7 +83,9 @@ class ArmaController {
             return
         }
 
-        armaInstance.delete flush: true
+            armaInstance.setEstatus(false)
+            if (armaInstance.save(flush: true))
+                println "Se eliminó logicamente"
 
         request.withFormat {
             form multipartForm {
