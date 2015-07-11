@@ -12,7 +12,9 @@ class RegionController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Region.list(params), model: [regionInstanceCount: Region.count()]
+        List<Region> regionList=Region.findAllByStatus(true,params)
+        def total=Region.countByEstatus(true)
+        respond region, model: [regionInstanceCount: total]
     }
 
     def show(Region regionInstance) {

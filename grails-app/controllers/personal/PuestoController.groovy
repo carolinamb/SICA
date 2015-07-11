@@ -12,7 +12,9 @@ class PuestoController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Puesto.list(params), model: [puestoInstanceCount: Puesto.count()]
+        List<Puesto> puestoList=Puesto.findAllByStatus(true,params)
+        def total=Puesto.countByEstatus(true)
+        respond puesto, model: [puestoInstanceCount: total]
     }
 
     def show(Puesto puestoInstance) {

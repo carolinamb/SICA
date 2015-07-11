@@ -16,7 +16,9 @@ class GradoController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Grado.list(params), model: [gradoInstanceCount: Grado.count()]
+        List<Grado> gradoList=Grado.findAllByStatus(true,params)
+        def total=Grado.countByEstatus(true)
+        respond grado, model: [gradoInstanceCount: total]
     }
 
     def show(Grado gradoInstance) {
