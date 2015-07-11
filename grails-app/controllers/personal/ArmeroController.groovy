@@ -12,7 +12,9 @@ class ArmeroController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Armero.list(params), model: [armeroInstanceCount: Armero.count()]
+        List<Armero> armeroList=Armero.findAllByStatus(true,params)
+        def total=Armero.countByEstatus(true)
+        respond armero, model: [armeroInstanceCount: total]
     }
 
     def show(Armero armeroInstance) {
