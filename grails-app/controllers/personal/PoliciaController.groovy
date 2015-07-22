@@ -81,7 +81,9 @@ class PoliciaController {
             return
         }
 
-        policiaInstance.delete flush: true
+        policiaInstance.setEstatus(false)
+        if (policiaInstance.save(flush: true))
+            println "Se eliminó logicamente"
 
         request.withFormat {
             form multipartForm {

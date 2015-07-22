@@ -83,7 +83,9 @@ class CartuchoController {
             return
         }
 
-        cartuchoInstance.delete flush:true
+        cartuchoInstance.setEstatus(false)
+        if (cartuchoInstance.save(flush: true))
+        println "Se eliminó logicamente"
 
         request.withFormat {
             form multipartForm {

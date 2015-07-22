@@ -83,7 +83,9 @@ class TurnoController {
             return
         }
 
-        turnoInstance.delete flush:true
+        turnoInstance.setEstatus(false)
+        if (turnoInstance.save(flush: true))
+            println "Se eliminó logicamente"
 
         request.withFormat {
             form multipartForm {

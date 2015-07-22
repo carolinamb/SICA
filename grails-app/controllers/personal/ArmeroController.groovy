@@ -83,7 +83,9 @@ class ArmeroController {
             return
         }
 
-        armeroInstance.delete flush: true
+        armeroInstance.setEstatus(false)
+        if (armeroInstance.save(flush: true))
+            println "Se eliminó logicamente"
 
         request.withFormat {
             form multipartForm {

@@ -83,7 +83,9 @@ class PuestoController {
             return
         }
 
-        puestoInstance.delete flush: true
+        puestoInstance.setEstatus(false)
+        if (puestoInstance.save(flush: true))
+            println "Se eliminó logicamente"
 
         request.withFormat {
             form multipartForm {

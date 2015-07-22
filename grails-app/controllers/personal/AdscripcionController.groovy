@@ -83,7 +83,9 @@ class AdscripcionController {
             return
         }
 
-        adscripcionInstance.delete flush:true
+        adscripcionInstance.setEstatus(false)
+        if (adscripcionInstance.save(flush: true))
+            println "Se eliminó logicamente"
 
         request.withFormat {
             form multipartForm {

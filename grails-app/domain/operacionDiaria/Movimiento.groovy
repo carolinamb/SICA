@@ -11,6 +11,7 @@ class Movimiento {
     Armero armero
     Turno turno
     static hasMany = [armasOcupadas:Arma]
+    Boolean estatus
 
 
     Date fechaEntrega
@@ -23,6 +24,10 @@ class Movimiento {
         turno nullable: false
         fechaEntrega nullable: true
         fechaRecepcion nullable: true
+        estatus nullable: true
+    }
+    def beforeInsert(){
+        this.estatus=true
     }
 
 }

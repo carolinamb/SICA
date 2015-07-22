@@ -90,7 +90,9 @@ class MovimientoController {
             return
         }
 
-        movimientoInstance.delete flush:true
+        movimientoInstance.setEstatus(falce)
+        if (movimientoInstance.save(flush: true))
+        println "Se eliminó logicamente"
 
         request.withFormat {
             form multipartForm {

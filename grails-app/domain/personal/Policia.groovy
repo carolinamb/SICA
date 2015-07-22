@@ -12,6 +12,7 @@ class Policia {
     String segundoApellido
     String cartuchosAbastecidos
     Long cargadoresAbastecidos
+    Boolean estatus
 
     Region region
     Puesto puesto
@@ -36,5 +37,9 @@ class Policia {
         cargadoresAbastecidos nullable: false
         armas nullable:true
         cartuchos nullable:true
+        estatus nullable: true
+    }
+    def beforeInsert(){
+        this.estatus=true
     }
 }

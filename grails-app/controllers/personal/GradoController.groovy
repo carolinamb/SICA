@@ -87,7 +87,9 @@ class GradoController {
             return
         }
 
-        gradoInstance.delete flush: true
+        gradoInstance.setEstatus(false)
+        if (gradoInstance.save(flush: true))
+            println "Se eliminó logicamente"
 
         request.withFormat {
             form multipartForm {
