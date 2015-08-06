@@ -14,9 +14,9 @@ class MovimientoController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        List<Movimiento> movimientoList=Movimiento.findAllByStatus(true,params)
+        List<Movimiento> movimientoList=Movimiento.findAllByEstatus(true,params)
         def total=Movimiento.countByEstatus(true)
-        respond movimiento, model: [movimientoInstance: total]
+        respond movimientoList, model: [movimientoInstance: total]
     }
 
     def show(Movimiento movimientoInstance) {

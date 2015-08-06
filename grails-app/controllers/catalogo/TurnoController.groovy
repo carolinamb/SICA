@@ -12,9 +12,9 @@ class TurnoController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        List<Turno> turnoList=Turno.findAllByStatus(true,params)
+        List<Turno> turnoList=Turno.findAllByEstatus(true,params)
         def total=Turno.countByEstatus(true)
-        respond turno, model: [turnoInstanceCount: total]
+        respond turnoList, model: [turnoInstanceCount: total]
     }
 
     def show(Turno turnoInstance) {

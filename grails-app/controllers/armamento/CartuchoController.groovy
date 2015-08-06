@@ -14,7 +14,7 @@ class CartuchoController {
         params.max = Math.min(max ?: 10, 100)
         List<Cartucho> cartuchoList=Cartucho.findAllByEstatus(true,params)
         def total=Cartucho.countByEstatus(true)
-        respond cartucho, model: [cartuchoInstanceCount: total]
+        respond cartuchoList, model: [cartuchoInstanceCount: total]
         }
 
     def show(Cartucho cartuchoInstance) {
