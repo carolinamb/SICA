@@ -10,15 +10,13 @@ class GradoController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def mainSica(){
-        render view:'/layouts/mainSICA'
-    }
+
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        List<Grado> gradoList=Grado.findAllByStatus(true,params)
+        List<Grado> gradoList=Grado.findAllByEstatus(true,params)
         def total=Grado.countByEstatus(true)
-        respond grado, model: [gradoInstanceCount: total]
+        respond gradoList, model: [gradoInstanceCount: total]
     }
 
     def show(Grado gradoInstance) {

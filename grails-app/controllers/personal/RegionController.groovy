@@ -12,9 +12,9 @@ class RegionController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        List<Region> regionList=Region.findAllByStatus(true,params)
+        List<Region> regionList=Region.findAllByEstatus(true,params)
         def total=Region.countByEstatus(true)
-        respond region, model: [regionInstanceCount: total]
+        respond regionList, model: [regionInstanceCount: total]
     }
 
     def show(Region regionInstance) {
@@ -83,7 +83,10 @@ class RegionController {
             return
         }
 
-        regionInstance.delete flush: true
+        regionInstance.setEstatus(false)
+        if (regionInstance.save(flush: true))
+            println "Se eliminó logicamente"
+
 
         request.withFormat {
             form multipartForm {

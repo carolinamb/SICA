@@ -12,7 +12,9 @@ class PoliciaController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Policia.list(params), model: [policiaInstanceCount: Policia.count()]
+        List<Policia> policiaList=Policia.findAllByEstatus(true,params)
+        def total=Policia.countByEstatus(true)
+        respond policiaList, model: [policiaInstanceCount: total]
     }
 
     def show(Policia policiaInstance) {

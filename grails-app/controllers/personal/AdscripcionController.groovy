@@ -12,9 +12,9 @@ class AdscripcionController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        List<Adscripcion> adscripcionList=Adscripcion.findAllByStatus(true,params)
+        List<Adscripcion> adscripcionList=Adscripcion.findAllByEstatus(true,params)
         def total=Adscripcion.countByEstatus(true)
-        respond adscripcion, model: [adscripcionInstanceCount: total]
+        respond adscripcionList, model: [adscripcionInstanceCount: total]
     }
 
     def show(Adscripcion adscripcionInstance) {
