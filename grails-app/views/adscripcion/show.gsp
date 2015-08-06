@@ -11,10 +11,10 @@
         <div class="nav" role="navigation">
             <ul>
                 <g:link class="btn btn-labeled icon fa fa-list btn-dark-gray btn-rounded" action="index">
-                    <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.armeros"/>
+                    <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.adscripcion"/>
                 </g:link>
                 <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
-                    <g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.armero"/>
+                    <g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.adscripcion"/>
                 </g:link>
             </ul>
         </div>

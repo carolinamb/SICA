@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<div id="page-body" role="main">
-			<h1>Soluciones Profecionales</h1>
+			<h1>Soluciones Profesionales</h1>
 		</div>
         <div>
             <img src="${resource(dir: 'images', file: 'logotipo.png')}">
