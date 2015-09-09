@@ -24,7 +24,7 @@ class BootStrap {
 
 
         //DATOS DE PRUEBA
-        Region region=new Region(descripcion: 'Region uno').save(flush: true)
+        /*Region region=new Region(descripcion: 'Region uno').save(flush: true)
         Adscripcion adscripcion=new Adscripcion(descripcion: 'Transito').save(flush: true)
         Turno turno=new Turno(descripcion: 'Turno uno').save(flush: true)
         Puesto puesto=new Puesto(descripcion: 'Secretario').save(flush: true)
@@ -41,7 +41,7 @@ class BootStrap {
                 turno: 1,
                 cargadoresAbastecidos: 3,
                 cartuchosAbastecidos: 40).save(flush: true)
-        Armero armero=new Armero(nombre: 'Juan',primerApellido: 'Perez',segundoApellido:  'Lopez',turno:1).save(flush: true)
+        Armero armero=new Armero(nombre: 'Juan',primerApellido: 'Perez',segundoApellido:  'Lopez',turno:1).save(flush: true)*/
     }
     def destroy = {
     }
