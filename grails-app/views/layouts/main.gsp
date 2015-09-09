@@ -27,14 +27,6 @@
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'fullcalendar.print.css')}" type="text/css" media="print">
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'font-awesome.min.css')}" type="text/css">
 	<style>
-	input[type="text"]  {
-		text-transform:uppercase;
-	}
-
-	textarea {
-		text-transform:uppercase;
-	}
-
 	li, .ui-menu-item > a, #ui, .ui-corner-all{z-index: 1151 !important;}
 	</style>
 	<g:javascript library="jquery"/>
@@ -102,8 +94,6 @@
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Perfil</a>
 									<ul class="dropdown-menu">
-										<li><a href="#">Ver mi perfil</a></li>
-										<li class="divider"></li>
 										<li><g:link controller="logout" action="index">Cerrar sesi&oacute;n</g:link></li>
 									</ul>
 								</li>

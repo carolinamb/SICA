@@ -114,8 +114,6 @@ class MovimientoController {
     }
 
     def buscarPoliciaClave(){
-        println('Buscar policia por clave')
-        println('La clave introducida es:'+params.clave)
         Policia policiaInstance
         def movimiento
         Boolean entrega=false
@@ -155,7 +153,7 @@ class MovimientoController {
             movimientoDTO.setArmas(armasOcupadas)
             movimientoDTO.setTurno(movimiento?.policia.turno.descripcion)
             if (movimiento?.fechaRecepcion){ movimientoDTO.setFechaRecepcion(movimiento?.fechaRecepcion.format("dd-MM-yyyy HH:mm:ss.S").toString())
-            }else{movimientoDTO.setFechaRecepcion backcolor="#FFFFFF" ("Arma No Entregada")}
+            }else{movimientoDTO.setFechaRecepcion("Arma No Entregada")}
 
             movimientoDTO.setFechaEntrega(movimiento?.fechaEntrega.format("dd-MM-yyyy HH:mm:ss.S").toString())
             movimientoDTOList.add(movimientoDTO)
