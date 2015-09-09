@@ -66,6 +66,7 @@ class GradoController {
             return
         }
 
+        gradoInstance.estatus=true
         gradoInstance.save flush: true
 
         request.withFormat {

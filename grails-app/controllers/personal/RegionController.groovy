@@ -37,6 +37,7 @@ class RegionController {
             return
         }
 
+        regionInstance.estatus=true
         regionInstance.save flush: true
 
         request.withFormat {

@@ -36,7 +36,7 @@ class PuestoController {
             respond puestoInstance.errors, view: 'create'
             return
         }
-
+        puestoInstance.estatus=true
         puestoInstance.save flush: true
 
         request.withFormat {
