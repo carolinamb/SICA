@@ -3,6 +3,7 @@ package operacionDiaria
 import dto.reportes.MovimientoDTO
 import dto.reportes.ReporteMovimientoDTO
 import personal.Policia
+import personal.Region
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -16,7 +17,8 @@ class MovimientoController {
         params.max = Math.min(max ?: 10, 100)
         List<Movimiento> movimientoList=Movimiento.findAllByEstatus(true,params)
         def total=Movimiento.countByEstatus(true)
-        respond movimientoList, model: [movimientoInstance: total]
+        List<Region> regionList = Region.findAllByEstatus(true)
+        respond movimientoList, model: [movimientoInstance: total, regionList:regionList]
     }
 
     def show(Movimiento movimientoInstance) {
@@ -131,7 +133,18 @@ class MovimientoController {
         }
     }
 
-    def reporte(){
+    def reporteGeneral() {
+        List<Movimiento> movimientosList = Movimiento.list()
+        construirReporte(movimientosList)
+    }
+
+    def reporteRegion() {
+        Region region = Region.read(params.long('region'))
+        List<Movimiento> movimientoList = Movimiento.findAll('from Movimiento as mov where mov.policia.region.id=:regionId',[regionId:region.id])
+        construirReporte(movimientoList)
+    }
+
+    def construirReporte(movimientosList){
         params._file='movimientos'
         params._format='PDF'
         params.SUBREPORT_DIR_MOVIMIENTOS = "${servletContext.getRealPath('/reports')}/subReportMovimientos.jasper"
@@ -139,7 +152,6 @@ class MovimientoController {
         String valorNullo=""
         ReporteMovimientoDTO reporte=new ReporteMovimientoDTO()
         def movimientoDTOList=[]
-        List<Movimiento> movimientosList=Movimiento.list()
         movimientosList.each {movimiento->
             String armasOcupadas=""
             MovimientoDTO movimientoDTO=new MovimientoDTO()

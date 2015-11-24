@@ -13,15 +13,34 @@
                 <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
                     <g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.movimiento"/>
                 </g:link>
-                <g:link class="btn btn-lg btn-labeled btn-primary" controller="movimiento" action="reporte" format="PDF"
-                        id="reporte"><span
-                        class="btn-label icon fa fa-file-text-o"></span>Generar Reporte</g:link>
             </ul>
         </div>
 		<div id="list-movimiento" class="content scaffold-list" role="main">
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
+            <div class="panel">
+                <div class="panel-heading">
+                    <span class="panel-title"><g:message code="default.palabra.generarReporte"/></span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-sm-3">
+                        <g:link class="btn btn-sm btn-labeled btn-primary" controller="movimiento" action="reporteGeneral" format="PDF"
+                                id="reporte"><span
+                                class="btn-label icon fa fa-file-text-o"></span>Generar Reporte General</g:link>
+                    </div>
+                    <div class="col-sm-9">
+                        <g:form method="POST" controller="movimiento" action="reporteRegion" format="PDF" id="reporteRegion">
+                            <div class="col-sm-6">
+                                <g:select name="region" from="${regionList}" optionValue="descripcion" optionKey="id" noSelection="['':'Selecciona región...']" required="" class="form-control"/>
+                            </div>
+                            <div class="col-sm-6">
+                                <button type="submit" class="btn btn-sm btn-labeled btn-primary">Generar informe por regi&oacute;n</button>
+                            </div>
+                        </g:form>
+                    </div>
+                </div>
+            </div>
             <div class="panel">
                 <div class="panel-heading">
                     <span class="panel-title"><g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.movimientos"/></span>
