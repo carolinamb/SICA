@@ -1,4 +1,5 @@
 import armamento.Arma
+import armamento.Cargadores
 import armamento.Cartucho
 import catalogo.Turno
 import groovy.sql.Sql
@@ -54,6 +55,19 @@ class BootStrap {
                         db.executeInsert(line)
                 }
                 println "Cartuchos 100% :::::::::"
+            } catch (Exception ex) {
+                println(ex)
+            }
+        }
+        if(!Cargadores.first()){
+            // Catálogo de CARGADORES
+            try {
+                is = new FileInputStream(urlCatalogos.toString() + 'catCargadores.sql')
+                println "::::::::: Cargadores: 0%... "
+                is.eachLine { line ->
+                    db.executeInsert(line)
+                }
+                println "Cargadores 100% :::::::::"
             } catch (Exception ex) {
                 println(ex)
             }
