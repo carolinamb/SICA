@@ -6,9 +6,7 @@
         <g:if test="${edit}">
             <span class="panel-title"><g:message code="default.button.editar.label"/> <g:message code="default.palabra.minus.movimiento"/></span>
         </g:if>
-        <g:if test="${!edit}">
-            <span class="panel-title"><g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.movimiento"/></span>
-        </g:if>
+
     </div>
     <div class="panel-body">
         <div class="fieldcontain ${hasErrors(bean: movimientoInstance, field: 'policia', 'error')} required form-group col-sm-6">

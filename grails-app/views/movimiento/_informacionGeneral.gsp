@@ -41,3 +41,12 @@
 <g:if test="${movimientoInstance?.fechaEntrega}">
     <g:render template="recepcion"/>
 </g:if>
+
+<div class="fieldcontain ${hasErrors(bean: movimientoInstance, field: 'observaciones', 'error')} required form-group col-sm-6">
+    <label for="observaciones" class="col-sm-2 control-label">
+        <g:message code="movimiento.observaciones.label" default="Observaciones" />
+    </label>
+    <div class="col-sm-10">
+        <g:textField name="observaciones" class="form-control" value="${movimientoInstance?.observaciones}"/>
+    </div>
+</div>

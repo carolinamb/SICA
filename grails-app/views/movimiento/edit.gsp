@@ -12,9 +12,7 @@
                 <g:link class="btn btn-labeled icon fa fa-list btn-dark-gray btn-rounded" action="index">
                     <g:message code="default.button.lista.label"/> <g:message code="default.palabra.minus.movimientos"/>
                 </g:link>
-                <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
-                    <g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.movimiento"/>
-                </g:link>
+
             </ul>
         </div>
 		<div id="edit-movimiento" class="content scaffold-edit" role="main">

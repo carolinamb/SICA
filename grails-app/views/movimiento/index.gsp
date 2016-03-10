@@ -9,11 +9,7 @@
 	</head>
 	<body>
         <div class="nav" role="navigation">
-            <ul>
-                <g:link class="btn btn-labeled icon fa fa-files-o btn-success btn-rounded" action="create">
-                    <g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.movimiento"/>
-                </g:link>
-            </ul>
+
         </div>
 		<div id="list-movimiento" class="content scaffold-list" role="main">
 			<g:if test="${flash.message}">
@@ -57,6 +53,14 @@
 
                             <g:sortableColumn property="turno" title="${message(code: 'armero.turno.label', default: 'Turno')}" />
 
+                            <g:sortableColumn property="cartuchosEntregados" title="${message(code: 'movimiento.cartuchosEntregados.label', default: 'Cartuchos Entregados')}" />
+
+                            <g:sortableColumn property="cartuchosRecibidos" title="${message(code: 'movimiento.cartuchosRecibidos.label', default: 'Cartuchos Recibidos')}" />
+
+                            <g:sortableColumn property="cargadoresEntregados" title="${message(code: 'movimiento.cargadoresEntregados.label', default: 'Cargadores Entregados')}" />
+
+                            <g:sortableColumn property="cargadoresRecibidos" title="${message(code: 'movimiento.cargadoresRecibidos.label', default: 'Cargadores Recibidos')}" />
+
                             <g:sortableColumn property="fechaEntrega" title="${message(code: 'armero.fechaEntrega.label', default: 'Fecha y Hora de Entrega')}" />
 
                             <g:sortableColumn property="fechaRecepcion" title="${message(code: 'armero.fechaRecepcion.label', default: 'Fecha y Hora de Recepci&oacute;n')}" />
@@ -81,6 +85,15 @@
                                     <td>${fieldValue(bean: movimientoInstance?.armero, field: "id")}</td>
 
                                     <td>${fieldValue(bean: movimientoInstance?.turno, field: "descripcion")}</td>
+
+                                    <td>${fieldValue(bean: movimientoInstance, field: "cartuchosEntregados")}</td>
+
+                                    <td>${fieldValue(bean: movimientoInstance, field: "cartuchosRecibidos")}</td>
+
+                                    <td>${fieldValue(bean: movimientoInstance, field: "cargadoresEntregados")}</td>
+
+                                    <td>${fieldValue(bean: movimientoInstance, field: "cargadoresRecibidos")}</td>
+
 
                                     <td>${fieldValue(bean: movimientoInstance, field: "fechaEntrega")}</td>
 

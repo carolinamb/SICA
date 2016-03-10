@@ -3,7 +3,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'movimiento.label', default: 'Movimiento')}" />
-		<title><g:message code="default.button.crearNuevo.label"/> <g:message code="default.palabra.minus.movimiento"/></title>
+
 	</head>
 	<body>
         <div class="nav" role="navigation">
