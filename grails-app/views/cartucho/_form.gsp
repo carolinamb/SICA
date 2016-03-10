@@ -10,13 +10,13 @@
         </g:if>
     </div>
     <div class="panel-body">
-        <div class="fieldcontain ${hasErrors(bean: cartuchoInstance, field: 'marca', 'error')} required form-group col-sm-6">
-            <label for="marca" class="col-sm-2 control-label">
-                <g:message code="cartucho.marca.label" default="Marca" />
+        <div class="fieldcontain ${hasErrors(bean: cartuchoInstance, field: 'cantidad', 'error')} required form-group col-sm-6">
+            <label for="cantidad" class="col-sm-2 control-label">
+                <g:message code="cartucho.cantidad.label" default="Cantidad" />
                 <span class="required-indicator">*</span>
             </label>
             <div class="col-sm-10">
-                <g:textField name="marca" class="form-control" required="" value="${cartuchoInstance?.marca}"/>
+                <g:textField name="cantidad" class="form-control" required="" value="${cartuchoInstance?.cantidad}"/>
             </div>
         </div>
         <div class="fieldcontain ${hasErrors(bean: cartuchoInstance, field: 'calibre', 'error')} required form-group col-sm-6">
