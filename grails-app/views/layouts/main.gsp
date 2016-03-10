@@ -136,6 +136,9 @@
 							<li>
 								<g:link action="index" controller="cartucho"><i class="menu-icon fa fa-cog"></i><span class="mm-text">Cartuchos</span></g:link>
 							</li>
+                            <li>
+                                <g:link action="index" controller="cargadores"><i class="menu-icon fa fa-cog"></i><span class="mm-text">Cargadores</span></g:link>
+                            </li>
 						</ul>
 					</li>
 					<li class="mm-dropdown">
