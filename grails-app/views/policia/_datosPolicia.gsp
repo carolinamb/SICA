@@ -85,44 +85,39 @@
             </div>
         </g:if>
 
-        <g:if test="${policiaInstance?.cartuchosAbastecidos}">
+        <g:if test="${policiaInstance?.cartuchos}">
             <div class="fieldcontain col-sm-6">
-                <span id="cartuchosAbastecidos-label" class="property-label"><g:message code="policia.cartuchosAbastecidos.label" default="Cartuchos Abastecidos" /></span>
+                <span id="cartuchos-label" class="property-label"><g:message code="policia.cartuchos.label" default="Cartuchos" /></span>
 
-                <span class="property-value" aria-labelledby="cartuchosAbastecidos-label"><g:fieldValue bean="${policiaInstance}" field="cartuchosAbastecidos"/></span>
+                <g:each in="${policiaInstance.cartuchos}" var="c">
+                    <span class="property-value" aria-labelledby="cartuchos-label"><g:link controller="cartucho" action="show" id="${c.id}">${c?.cantudad?.encodeAsHTML()} ${c?.calibre?.encodeAsHTML()}</g:link></span>
+                </g:each>
 
             </div>
         </g:if>
 
-        <g:if test="${policiaInstance?.cargadoresAbastecidos}">
-            <div class="fieldcontain col-sm-6">
-                <span id="cargadoresAbastecidos-label" class="property-label"><g:message code="policia.cargadoresAbastecidos.label" default="Cargadores Abastecidos" /></span>
+        <<g:if test="${policiaInstance?.cargadores}">
+        <div class="fieldcontain col-sm-6">
+            <span id="cargadores-label" class="property-label"><g:message code="policia.cargadores.label" default="Cargadores" /></span>
 
-                <span class="property-value" aria-labelledby="cargadoresAbastecidos-label"><g:fieldValue bean="${policiaInstance}" field="cargadoresAbastecidos"/></span>
+            <g:each in="${policiaInstance.cargadores}" var="c">
+                <span class="property-value" aria-labelledby="cargadores-label"><g:link controller="cargadores" action="show" id="${policiaInstance?.cargadores?.id}">${policiaInstance?.cargadores?.descripcion?.encodeAsHTML()}</g:link></span>
+            </g:each>
 
-            </div>
-        </g:if>
+        </div>
+    </g:if>
 
         <g:if test="${policiaInstance?.armas}">
             <div class="fieldcontain col-sm-6">
                 <span id="armas-label" class="property-label"><g:message code="policia.armas.label" default="Armas" /></span>
 
                 <g:each in="${policiaInstance.armas}" var="a">
-                    <span class="property-value" aria-labelledby="armas-label"><g:link controller="arma" action="show" id="${a.id}">${a?.marca?.encodeAsHTML()} ${a?.modelo?.encodeAsHTML()}</g:link></span>
+                    <span class="property-value" aria-labelledby="armas-label"><g:link controller="arma" action="show" id="${a.id}">${a?.marca?.encodeAsHTML()} ${a?.modelo?.encodeAsHTML()} ${a?.matricula?.encodeAsHTML()}</g:link></span>
                 </g:each>
 
             </div>
         </g:if>
 
-        <g:if test="${policiaInstance?.cartuchos}">
-            <div class="fieldcontain col-sm-6">
-                <span id="cartuchos-label" class="property-label"><g:message code="policia.cartuchos.label" default="Cartuchos" /></span>
 
-                <g:each in="${policiaInstance.cartuchos}" var="c">
-                    <span class="property-value" aria-labelledby="cartuchos-label"><g:link controller="cartucho" action="show" id="${c.id}">${c?.marca?.encodeAsHTML()} ${c?.calibre?.encodeAsHTML()}</g:link></span>
-                </g:each>
-
-            </div>
-        </g:if>
     </div>
 </div>

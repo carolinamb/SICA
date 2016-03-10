@@ -127,7 +127,7 @@
 
             </label>
             <div class="col-sm-10">
-                <g:select name="armas"  class="many-to-one form-control" from="${armamento.Arma.list()}" optionValue="${{it.modelo+'/'+it.tipo}}" multiple="multiple" optionKey="id" size="5" value="${policiaInstance?.armas*.id}" />
+                <g:select name="armas"  class="many-to-one form-control" from="${armamento.Arma.list()}" optionValue="${{it.modelo+'/'+it.matricula+'/'+it.marca}}" multiple="multiple" optionKey="id" size="5" value="${policiaInstance?.armas*.id}" />
             </div>
         </div>
 
