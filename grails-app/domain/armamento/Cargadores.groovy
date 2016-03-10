@@ -1,7 +1,18 @@
 package armamento
 
-/**
- * Created by hp on 2/03/16.
- */
 class Cargadores {
+
+    String cantidad
+    Boolean estatus
+
+    static constraints = {
+
+        cantidad nellable:false
+        estatus nullable: true
+    }
+    def beforeInsert(){
+        this.estatus=true
+    }
 }
+
+
