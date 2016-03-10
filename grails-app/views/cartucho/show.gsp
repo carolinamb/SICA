@@ -27,17 +27,14 @@
                     <span class="panel-title"><g:message code="default.button.mostrarDetalle.label"/> <g:message code="default.palabra.minus.cartucho"/></span>
                 </div>
                 <div class="panel-body">
-
-
-                    <g:if test="${cartuchoInstance?.marca}">
+                    <g:if test="${cartuchoInstance?.cantidad}">
                         <div class="fieldcontain col-sm-6">
-                           <span id="marca-label" class="property-label col-sm-4 text-bold"><g:message code="cartucho.marca.label" default="Marca" /></span>
-					
-						    <span class="property-value col-sm-8" aria-labelledby="marca-label"><g:fieldValue bean="${cartuchoInstance}" field="marca"/></span>
-					
-				        </div>
-				    </g:if>
-			
+                            <span id="cantidad-label" class="property-label col-sm-4 text-bold"><g:message code="cartucho.cantidad.label" default="Cantidad" /></span>
+
+                            <span class="property-value col-sm-8" aria-labelledby="cantidad-label"><g:fieldValue bean="${cartuchoInstance}" field="cantidad"/></span>
+
+                        </div>
+                    </g:if>
                     <g:if test="${cartuchoInstance?.calibre}">
                         <div class="fieldcontain col-sm-6">
                             <span id="calibre-label" class="property-label col-sm-4 text-bold"><g:message code="cartucho.calibre.label" default="Calibre" /></span>

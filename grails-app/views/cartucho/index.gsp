@@ -27,8 +27,8 @@
                     <table class="table table-hover">
                         <thead>
                         <tr>
-						    <g:sortableColumn property="marca" title="${message(code: 'cartucho.marca.label', default: 'Marca')}" />
-					
+
+                            <g:sortableColumn property="cantidad" title="${message(code: 'cartucho.cantidad.label', default: 'Cantidad')}" />
 						    <g:sortableColumn property="calibre" title="${message(code: 'cartucho.calibre.label', default: 'Calibre')}" />
 
                         </tr>
@@ -37,8 +37,8 @@
 				            <g:each in="${cartuchoInstanceList}" status="i" var="cartuchoInstance">
                                 <tr class="${(i % 2) == 0 ? 'even' : 'odd'} mouse-over" onclick='document.location = "<g:createLink action='show' id='${cartuchoInstance.id}'/>"'>
 
-						            <td><g:link action="show" id="${cartuchoInstance.id}">${fieldValue(bean: cartuchoInstance, field: "marca")}</g:link></td>
-					
+
+                                    <td>${fieldValue(bean: cartuchoInstance, field: "cantidad")}</td>
 					            	<td>${fieldValue(bean: cartuchoInstance, field: "calibre")}</td>
 					
 					            </tr>
