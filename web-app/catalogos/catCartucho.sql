@@ -1,8 +1,8 @@
-INSERT INTO cartucho (id,version,marca,calibre,estatus) VALUES (1,0,'MARCA1','CALIBRE1',true);
-INSERT INTO cartucho (id,version,marca,calibre,estatus) VALUES (2,0,'MARCA2','CALIBRE2',true);
-INSERT INTO cartucho (id,version,marca,calibre,estatus) VALUES (3,0,'MARCA3','CALIBRE3',true);
-INSERT INTO cartucho (id,version,marca,calibre,estatus) VALUES (4,0,'MARCA4','CALIBRE4',true);
-INSERT INTO cartucho (id,version,marca,calibre,estatus) VALUES (5,0,'MARCA5','CALIBRE5',true);
-INSERT INTO cartucho (id,version,marca,calibre,estatus) VALUES (6,0,'MARCA6','CALIBRE6',true);
-INSERT INTO cartucho (id,version,marca,calibre,estatus) VALUES (7,0,'MARCA7','CALIBRE7',true);
-INSERT INTO cartucho (id,version,marca,calibre,estatus) VALUES (8,0,'MARCA8','CALIBRE8',true);
+INSERT INTO cartucho (id,version,calibre,estatus,cantidad) VALUES (1,0,'CALIBRE1',true,1);
+INSERT INTO cartucho (id,version,calibre,estatus,cantidad) VALUES (2,0,'CALIBRE2',true,2);
+INSERT INTO cartucho (id,version,calibre,estatus,cantidad) VALUES (3,0,'CALIBRE3',true,1);
+INSERT INTO cartucho (id,version,calibre,estatus,cantidad) VALUES (4,0,'CALIBRE4',true,1);
+INSERT INTO cartucho (id,version,calibre,estatus,cantidad) VALUES (5,0,'CALIBRE5',true,2);
+INSERT INTO cartucho (id,version,calibre,estatus,cantidad) VALUES (6,0,'CALIBRE6',true,1);
+INSERT INTO cartucho (id,version,calibre,estatus,cantidad) VALUES (7,0,'CALIBRE7',true,2);
+INSERT INTO cartucho (id,version,calibre,estatus,cantidad) VALUES (8,0,'CALIBRE8',true,2);

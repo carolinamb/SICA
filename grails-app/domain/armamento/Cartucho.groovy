@@ -4,14 +4,14 @@ class Cartucho {
 
     //String marca
     String calibre
-    String cantidad
+    Integer cantidad
     Boolean estatus
 
     static constraints = {
 
        // marca nullable: false
         calibre nullable: false
-        cantidad nellable:false
+        cantidad nullable:false
         estatus nullable: true
     }
     def beforeInsert(){

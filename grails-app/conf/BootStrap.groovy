@@ -59,7 +59,7 @@ class BootStrap {
                 println(ex)
             }
         }
-        if(!Cargadores.first()){
+        /*if(!Cargadores.first()){
             // Catálogo de CARGADORES
             try {
                 is = new FileInputStream(urlCatalogos.toString() + 'catCargadores.sql')
@@ -71,7 +71,7 @@ class BootStrap {
             } catch (Exception ex) {
                 println(ex)
             }
-        }
+        }*/
         if(!Arma.first()){
             // Catálogo de ARMA
             try {

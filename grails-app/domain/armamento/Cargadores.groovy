@@ -2,12 +2,11 @@ package armamento
 
 class Cargadores {
 
-    String cantidad
+    Integer cantidad
     Boolean estatus
 
     static constraints = {
-
-        cantidad nellable:false
+        cantidad nullable:false
         estatus nullable: true
     }
     def beforeInsert(){
