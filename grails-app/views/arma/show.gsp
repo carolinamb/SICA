@@ -71,6 +71,18 @@
                             <span class="property-value col-sm-8" aria-labelledby="matricula-label"><g:fieldValue bean="${armaInstance}" field="matricula"/></span>
                         </div>
                     </g:if>
+
+                    <div class="fieldcontain col-sm-6">
+                        <span id="cantidadCartuchos-label" class="property-label col-sm-4 text-bold"><g:message code="arma.cantidadCartuchos.label" default="Cantidad de Cartuchos" /></span>
+
+                        <span class="property-value col-sm-8" aria-labelledby="cantidadCartuchos-label"><g:fieldValue bean="${armaInstance}" field="cantidadCartuchos"/></span>
+                    </div>
+
+                    <div class="fieldcontain col-sm-6">
+                        <span id="cantidadCargadores-label" class="property-label col-sm-4 text-bold"><g:message code="arma.cantidadCargadores.label" default="Cantidad de Cargadores" /></span>
+
+                        <span class="property-value col-sm-8" aria-labelledby="cantidadCargadores-label"><g:fieldValue bean="${armaInstance}" field="cantidadCargadores"/></span>
+                    </div>
                 </div>
             </div>
 			<g:form url="[resource:armaInstance, action:'delete']" method="DELETE">

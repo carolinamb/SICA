@@ -1,7 +1,6 @@
 package personal
 
 import armamento.Arma
-import armamento.Cartucho
 import catalogo.Turno
 
 class Policia {
@@ -10,7 +9,7 @@ class Policia {
     String nombre
     String primerApellido
     String segundoApellido
-    String cartuchosAbastecidos
+    Long cartuchosAbastecidos
     Long cargadoresAbastecidos
     Boolean estatus
 
@@ -21,7 +20,7 @@ class Policia {
     Turno turno
 
 
-    static hasMany = [armas:Arma,cartuchos:Cartucho]
+    static hasMany = [armas:Arma]
 
     static constraints = {
         clave nullable: false, unique: true
@@ -36,7 +35,6 @@ class Policia {
         cartuchosAbastecidos nullable: false
         cargadoresAbastecidos nullable: false
         armas nullable:true
-        cartuchos nullable:true
         estatus nullable: true
     }
     def beforeInsert(){

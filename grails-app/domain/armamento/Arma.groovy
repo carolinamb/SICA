@@ -8,6 +8,8 @@ class Arma {
     String calibre
     String matricula
     Boolean estatus
+    int cantidadCartuchos
+    int cantidadCargadores
     /*
     * STATUS:
     * true--->Activo
@@ -15,7 +17,8 @@ class Arma {
     * */
 
     static constraints = {
-
+        cantidadCartuchos null:false
+        cantidadCargadores null:false
         marca nullable: false
         tipo nullable: false
         modelo nullable: false
