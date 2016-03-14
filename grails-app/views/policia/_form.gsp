@@ -130,16 +130,6 @@
                 <g:select name="armas"  class="many-to-one form-control" from="${armamento.Arma.list()}" optionValue="${{it.modelo+'/'+it.matricula+'/'+it.marca}}" multiple="multiple" optionKey="id" size="5" value="${policiaInstance?.armas*.id}" />
             </div>
         </div>
-
-        <div class="fieldcontain ${hasErrors(bean: policiaInstance, field: 'cartuchos', 'error')} required form-group col-sm-6">
-            <label for="cartuchos" class="col-sm-2 control-label">
-                <g:message code="policia.cartuchos.label" default="Cartuchos" />
-
-            </label>
-            <div class="col-sm-10">
-                <g:select name="cartuchos"  class="many-to-one form-control" from="${armamento.Cartucho.list()}" optionValue="calibre" multiple="multiple" optionKey="id" size="5" value="${policiaInstance?.cartuchos*.id}" />
-            </div>
-        </div>
     </div>
 </div>
 

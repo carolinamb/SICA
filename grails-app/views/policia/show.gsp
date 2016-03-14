@@ -105,17 +105,6 @@
                         </div>
                     </g:if>
 
-                    <g:if test="${policiaInstance?.cartuchos}">
-                        <div class="fieldcontain col-sm-6">
-                            <span id="cartuchos-label" class="property-label col-sm-4 text-bold"><g:message code="policia.cartuchos.label" default="Cartuchos" /></span>
-                            <span class="property-value col-sm-8" aria-labelledby="cartuchos-label">
-                                <g:each in="${policiaInstance?.cartuchos}" var="cartucho" status="i">
-                                    ${cartucho?.marca}
-                                </g:each>
-                            </span>
-                        </div>
-                    </g:if>
-
                     <g:if test="${policiaInstance?.armas}">
                         <div class="fieldcontain col-sm-6">
                             <span id="armas-label" class="property-label col-sm-4 text-bold"><g:message code="policia.armas.label" default="Armas" /></span>
